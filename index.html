@@ -8,6 +8,28 @@
     <title>Green Quiz</title>
 </head>
 <body>
-    
+    <header>
+        <h1 id="logo">Greener Quiz</h1>
+        <button id="help"><i class="fa-solid fa-circle-info"></i></button>
+    </header>
+    <div>
+        <div id="question-container">
+            <h2 id="question-title">Question</h2>
+            <p id="question-description">Description</p>
+            <form>
+                <input type="radio" class="answer" id="answer1"><label for="answer1">Answer 1</label>
+                <input type="radio" class="answer" id="answer2"><label for="answer2">Answer 2</label>
+                <input type="radio" class="answer" id="answer3"><label for="answer3">Answer 3</label>
+                <input type="radio" class="answer" id="answer4"><label for="answer4">Answer 4</label>
+            </form>
+            <picture id="question-image"></picture>
+        </div>
+        <button class="btn" id="back">Back</button>
+        <button class="btn" id="forward">Next</button>
+        <button class="btn hide" id="submit" src="/results.html">Submit</button>
+    </div>
+
+    <!--font awesome script-->
+    <script src="https://kit.fontawesome.com/b04fbaf5c5.js" crossorigin="anonymous"></script>
 </body>
 </html>
