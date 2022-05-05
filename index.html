@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +11,7 @@
     <script defer src="/assets/js/script.js"></script>
     <title>Green Quiz</title>
 </head>
+
 <body>
     <header id="header-bar">
         <h1 id="logo">Greener Quiz</h1>
@@ -17,22 +19,32 @@
     </header>
     <div id="question-container">
         <div>
-            <h2 id="question-title">Question</h2>
-            <p id="question-description">Description</p>
-            <form>
-                <input type="radio" class="answer" id="answer1"><label for="answer1">Answer 1</label>
-                <input type="radio" class="answer" id="answer2"><label for="answer2">Answer 2</label>
-                <input type="radio" class="answer" id="answer3"><label for="answer3">Answer 3</label>
-                <input type="radio" class="answer" id="answer4"><label for="answer4">Answer 4</label>
-            </form>
-            <picture id="question-image"></picture>
+            <h2 id="question">Question</h2>
+            <form id="answer-form" class="btn-grid">
+                <button class="btn btn-answer">Answer 1</button>
+                <button class="btn btn-answer">Answer 2</button>
+                <button class="btn btn-answer">Answer 3</button>
+                <button class="btn btn-answer">Answer 4</button>
+                <picture id="question-image"></picture>
         </div>
         <button class="btn" id="btn-back">Back</button>
         <button class="btn" id="btn-forward">Next</button>
         <button class="btn hide" id="btn-submit"><a href="/results.html">Submit</a></button>
     </div>
+    <div id="pop-up">
+        <div class="pop-up-header">
+            <h2>Instructions</h2>
+            <button id="close-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="pop-up-body">
+            <p>The purpose of this quiz is to assess how green you are by asking a series of questions and scoring you
+                depending on your answer.</p>
+        </div>
+    </div>
+    <div id="overlay"></div>
 
     <!--font awesome script-->
     <script src="https://kit.fontawesome.com/b04fbaf5c5.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
