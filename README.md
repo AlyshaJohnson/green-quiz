@@ -1,4 +1,4 @@
-# Love Running
+# Green Quiz
 
 In this section, you will include one or two paragraphs providing an overview of your project. Essentially, this part is your sales pitch. At this stage, you should have a name for your project so use it! Don’t introduce the project as a Portfolio project for the diploma. In this section, describe what the project hopes to accomplish, who it is intended to target and how it will be useful to the target audience. 
 
@@ -107,6 +107,9 @@ The live link can be found here - https://code-institute-org.github.io/love-runn
 In this section you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
 
 You can break the credits section up into Content and Media, depending on what you have included in your project. 
+
+Shuffling an array - research:
+https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj#:~:text=Custom%20sort,)%20%3D%3E%200.5%20%2D%20Math.
 
 ### Content 
 
