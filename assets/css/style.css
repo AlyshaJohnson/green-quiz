@@ -66,6 +66,10 @@ h1, h2 {
     color: #e4e4e0;
 }
 
+.btn-answer:active {
+    background-color: #13443e;
+}
+
 .btn-back {
     margin-left: 30%;
 }
@@ -83,7 +87,7 @@ h1, h2 {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0);
     background-color: white;
     border-radius: 5px;
     padding: 10px;
@@ -91,6 +95,10 @@ h1, h2 {
     z-index: 10;
     width: 500px;
     max-width: 80%;
+}
+
+#pop-up.active {
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .pop-up-header {

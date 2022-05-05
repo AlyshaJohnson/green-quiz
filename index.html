@@ -15,17 +15,18 @@
 <body>
     <header id="header-bar">
         <h1 id="logo">Greener Quiz</h1>
-        <button id="btn-help"><i class="fa-solid fa-circle-info"></i></button>
+        <button data-popup-target="#pop-up" id="btn-help"><i class="fa-solid fa-circle-info"></i></button>
     </header>
     <div id="question-container">
         <div>
             <h2 id="question">Question</h2>
-            <form id="answer-form" class="btn-grid">
+            <div id="answer-form" class="btn-grid">
                 <button class="btn btn-answer">Answer 1</button>
                 <button class="btn btn-answer">Answer 2</button>
                 <button class="btn btn-answer">Answer 3</button>
                 <button class="btn btn-answer">Answer 4</button>
-                <picture id="question-image"></picture>
+            </div>
+            <picture id="question-image"></picture>
         </div>
         <button class="btn" id="btn-back">Back</button>
         <button class="btn" id="btn-forward">Next</button>
@@ -34,7 +35,7 @@
     <div id="pop-up">
         <div class="pop-up-header">
             <h2>Instructions</h2>
-            <button id="close-btn"><i class="fa-solid fa-xmark"></i></button>
+            <button data-close-button id="close-btn"><i class="fa-solid fa-xmark"></i></button>
         </div>
         <div class="pop-up-body">
             <p>The purpose of this quiz is to assess how green you are by asking a series of questions and scoring you

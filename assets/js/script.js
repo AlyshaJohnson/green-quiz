@@ -16,7 +16,7 @@ nextButton.addEventListener('click', setNextQuestion);
 backButton.addEventListener('click', previousQuestion);
 //submitButton.addEventListener('click', )
 helpButton.addEventListener('click', selectHelpButton);
-closeButton.addEventListener('click', closeButton);
+closeButton.addEventListener('click', closeHelp);
 
 // questions
 let questions = [
@@ -96,7 +96,7 @@ let questions = [
 
 // start quiz on load
 window.addEventListener('load',loadQuiz);
-window.addEventListener('load', selectHelpButton);
+//window.addEventListener('load', selectHelpButton);
 
 function loadQuiz() {
     console.log('loadQuiz');
@@ -123,16 +123,10 @@ function showQuestion (question) {
   });
 }
 
-// pop up on load
-function loadPopUp() {
-  selectHelpButton();
-}
-
 //select answer
-
-
-//move to next question
-
+function selectAnswer () {
+  
+}
 
 // submit quiz
 function submitQuiz() {
