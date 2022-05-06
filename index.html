@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A quiz to help guide on being more green">
     <meta name="keywords" content="green, environment, how-to, quiz, journey to green">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <script defer src="/assets/js/script.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Green Quiz</title>
 </head>
 
@@ -18,20 +17,30 @@
         <button data-popup-target="#pop-up" id="btn-help"><i class="fa-solid fa-circle-info"></i></button>
     </header>
     <div id="question-container">
+        <div class="question-counter-container">
+            <p id="question-counter-heading">
+                Question:
+            </p>
+            <p id="question-counter" class="question-counter">
+                0/8
+            </p>
+        </div>
         <div>
             <h2 id="question">Question</h2>
             <div id="answer-form" class="btn-grid">
-                <button class="btn btn-answer">Answer 1</button>
-                <button class="btn btn-answer">Answer 2</button>
-                <button class="btn btn-answer">Answer 3</button>
-                <button class="btn btn-answer">Answer 4</button>
+                <button id="answer-1" class="btn btn-answer">Answer 1</button>
+                <button id="answer-2"class="btn btn-answer">Answer 2</button>
+                <button id="answer-3"class="btn btn-answer">Answer 3</button>
+                <button id="answer-4"class="btn btn-answer">Answer 4</button>
             </div>
             <picture id="question-image"></picture>
         </div>
         <button class="btn" id="btn-back">Back</button>
         <button class="btn" id="btn-forward">Next</button>
-        <button class="btn hide" id="btn-submit"><a href="/results.html">Submit</a></button>
+        <button class="btn hide" id="btn-submit">Submit</button>
     </div>
+
+    <!--help pop up-->
     <div id="pop-up">
         <div class="pop-up-header">
             <h2>Instructions</h2>
@@ -44,8 +53,48 @@
     </div>
     <div id="overlay"></div>
 
+    <!--results container-->
+    <div id="results-container" class="hide">
+        <div>
+            <h2>Results</h2>
+            <p>score</p>
+            <p>description</p>
+            <p>suggestions</p>
+        </div>
+        <form action="">
+            <p>You can email your results here:</p>
+            <label for="">Name:</label>
+            <input type="text">
+            <label for="">Email:</label>
+            <input type="email">
+            <input type="submit">
+        </form>
+        <div>
+            <p>Or share on your socials:</p>
+            <ul id="socials">
+                <li>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener"
+                        aria-label="Visit our Facebook page (opens in a new tab)"><i
+                            class="fa-brands fa-facebook-square"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener"
+                        aria-label="Visit our Instagram page (opens in a new tab)"><i
+                            class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.twitter.com/" target="_blank" rel="noopener"
+                        aria-label="Visit our TikTok page (opens in a new tab)"><i class="fa-brands fa-twitter"></i></a>
+                </li>
+            </ul>
+        </div>
+        <img src="" alt="">
+    </div>
+
     <!--font awesome script-->
     <script src="https://kit.fontawesome.com/b04fbaf5c5.js" crossorigin="anonymous"></script>
+    <!--JS script-->
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
