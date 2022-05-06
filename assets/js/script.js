@@ -224,10 +224,13 @@ function showNextQuestion(question) {
     document.getElementById('answer-'+(i+1)).innerText = answer.text;
   });
   //if question is last then show submit button
-  if (counter === noOfQuestions) {
+  if (counter === noOfQuestions || currentQuestionIndex == (noOfQuestions - 1)) {
     submitButton.classList.remove('hide');
     nextButton.classList.add('hide');
-  };
+  } else {
+    submitButton.classList.add('hide');
+    nextButton.classList.remove('hide');
+  }
   // progress counter
   counter++;
   counterContainer.innerText = `${counter}/${noOfQuestions}`;
