@@ -113,17 +113,14 @@ https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj#:~:text=Custo
 
 ### Content 
 
-- The text for the Home page was taken from Wikipedia Article A
 - Instructions on how to implement form validation on the Sign Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
+- The fonts were taken from [GoogleFonts] (https://fonts.google.com/)
 - The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
 
 ### Media
 
-- The photos used on the home and sign up page are from This Open Source site
-- The images used for the gallery page were taken from this other open source site
-
-
-Congratulations on completing your Readme, you have made another big stride in the direction of being a developer! 
+The photos used throughout the quiz are stock imagery from the following services:
+  - [unsplash] (https://unsplash.com/)
 
 ## Other General Project Advice
 

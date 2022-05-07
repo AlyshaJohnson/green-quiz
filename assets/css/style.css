@@ -55,31 +55,44 @@ h1, h2 {
 
 /* buttons */
 .btn {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    font-family: inherit;
     border: 1px solid #13443e;
     padding: 5px;
     border-radius: 5px;
+    margin: 5px;
+    background-color: #efefef;
 }
 
 .btn:hover {
     background-color: #13443e;
-    color: #e4e4e0;
+    color: #efefef;
 }
 
-.btn-answer:active {
+.btn-grid {
+    display: grid;
+    width: 700px;
+    max-width: 80%;
+    margin: 5px;
+}
+
+.btn-answer {
+    text-align: left;
+}
+
+.active {
     background-color: #13443e;
-}
-
-.btn-back {
-    margin-left: 30%;
-}
-
-.btn-forward {
-    margin-right: 30%;
+    color: #efefef;
 }
 
 .hide {
     display: none;
+}
+
+/* image sizing and positioning */
+img {
+    width: 400px;
+    max-width: 80%;
 }
 
 /* pop up */
@@ -136,3 +149,4 @@ h1, h2 {
     opacity: 1;
     pointer-events: all;
 }
+

@@ -17,7 +17,9 @@ let questions = [{
         text: 'Answer D',
         score: 4
       },
-    ]
+    ],
+    images: './',
+    alt: '',
   },
   {
     question: 'Question 2',
@@ -37,7 +39,10 @@ let questions = [{
         text: 'Answer D',
         score: 4
       },
-    ]
+    ],
+    // credit to @sigmund on unsplash
+    images: './assets/images/sigmund-3FPtmyflfKQ-unsplash.jpeg',
+    alt: 'Black and blue wheelie bins in front of green foliage.',
   },
   {
     question: 'Question 3',
@@ -57,7 +62,9 @@ let questions = [{
         text: 'Answer D',
         score: 4
       },
-    ]
+    ],
+    images: './',
+    alt: '',
   },
   {
     question: 'Question 4',
@@ -77,7 +84,9 @@ let questions = [{
         text: 'Answer D',
         score: 4
       },
-    ]
+    ],
+    images: './',
+    alt: '',
   },
   {
     question: 'Question 5',
@@ -97,7 +106,9 @@ let questions = [{
         text: 'Answer D',
         score: 4
       },
-    ]
+    ],
+    images: './',
+    alt: '',
   },
   {
     question: 'Question 6',
@@ -117,7 +128,9 @@ let questions = [{
         text: 'Answer D',
         score: 4
       },
-    ]
+    ],
+    images: './',
+    alt: '',
   },
   {
     question: 'Question 7',
@@ -137,7 +150,9 @@ let questions = [{
         text: 'Answer D',
         score: 4
       },
-    ]
+    ],
+    images: './',
+    alt: '',
   },
   {
     question: 'Question 8',
@@ -157,7 +172,9 @@ let questions = [{
         text: 'Answer D',
         score: 4
       },
-    ]
+    ],
+    images: './',
+    alt: '',
   }
 ]
 
@@ -173,6 +190,7 @@ let popUp = document.getElementById('pop-up');
 let overlay = document.getElementById('overlay');
 let counterContainer = document.getElementById('question-counter')
 let noOfQuestions = questions.length
+let image = document.getElementById('question-image')
 
 let shuffledQuestions, currentQuestionIndex, score, counter;
 
@@ -219,10 +237,15 @@ function nextQuestion() {
 // show next question
 function showNextQuestion(question) {
   console.log('showNextQuestion');
+  // show question from array
   questionElement.innerText = question.question;
+  // show answer from array
   question.answers.forEach((answer, i) => {
     document.getElementById('answer-'+(i+1)).innerText = answer.text;
   });
+  //show image and alt from array
+  image.src = question.images;
+  image.alt = question.alt;
   //if question is last then show submit button
   if (counter === noOfQuestions || currentQuestionIndex == (noOfQuestions - 1)) {
     submitButton.classList.remove('hide');
@@ -236,9 +259,9 @@ function showNextQuestion(question) {
   counterContainer.innerText = `${counter}/${noOfQuestions}`;
 }
 
-//select answer
+// on click resets colour of all answer buttons to neutral, selected button changes colour and answer used for score.
 function selectAnswer() {
-
+  answerButtons.classList.add('active');
 }
 
 // block user from submitting no answer
