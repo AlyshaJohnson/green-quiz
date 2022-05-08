@@ -1,43 +1,44 @@
 // questions
 let questions = [{
-    question: 'Question 1',
+    question: 'What type of car do you drive?',
     answers: [{
-        text: 'Answer A',
-        score: 2
-      },
-      {
-        text: 'Answer B',
-        score: 1
-      },
-      {
-        text: 'Answer C',
+        text: 'Full plug-in Electric',
         score: 3
       },
       {
-        text: 'Answer D',
+        text: 'Petrol / Diesel',
+        score: 1
+      },
+      {
+        text: 'Hybrid / alternate fuel',
+        score: 2
+      },
+      {
+        text: 'I do not own a car / I use public transport',
         score: 4
       },
     ],
-    images: './',
-    alt: '',
+    // credit to bjearwicke on freeimages
+    images: './assets/images/running-on-empty-1311801.jpeg',
+    alt: 'Empty fuel gauge',
   },
   {
-    question: 'Question 2',
+    question: 'What level of recycling do you currently do?',
     answers: [{
-        text: 'Answer A',
-        score: 2
-      },
-      {
-        text: 'Answer B',
+        text: 'I only fill up the general waste bin / I do not have a recycling bin.',
         score: 1
       },
       {
-        text: 'Answer C',
-        score: 3
+        text: 'I actively reduce the amount that goes into the general waste bin by recyling, composting and using local services to reduce waste.',
+        score: 4
       },
       {
-        text: 'Answer D',
-        score: 4
+        text: 'My recycling bin and general waste bin are used at the same rate',
+        score: 2
+      },
+      {
+        text: 'More goes into the recycling bin than the general waste bin',
+        score: 3
       },
     ],
     // credit to @sigmund on unsplash
@@ -195,7 +196,7 @@ let answerButtons = document.getElementsByClassName('.btn-answer');
 let resultsContainer = document.getElementById('results-container');
 let questionContainer = document.getElementById('question-container')
 
-let shuffledQuestions, currentQuestionIndex, score, counter, acceptingAnswers, selectedChoice;
+let shuffledQuestions, currentQuestionIndex, score, counter, acceptingAnswers, selectedChoice, selectedScore;
 
 // start quiz on load
 window.addEventListener('load', loadQuiz);
@@ -251,6 +252,7 @@ function showNextQuestion(question) {
   // show answer from array
   question.answers.forEach((answer, i) => {
     document.getElementById('answer-'+(i+1)).innerText = answer.text;
+    document.getElementById('answer-'+(i+1)).value = answer.score;
   });
   //show image and alt from array
   image.src = question.images;
@@ -267,7 +269,9 @@ function showNextQuestion(question) {
   counter++;
   counterContainer.innerText = `${counter}/${noOfQuestions}`;
   // score = score + question.answer.score
-  console.log(selectedChoice);
+  console.log(selectedScore);
+  console.log(score);
+  score = parseInt(score) + parseInt(selectedScore);
 }
 
 // selected button changes colour and answer used for score.
@@ -276,6 +280,7 @@ function selectAnswer(event) {
     acceptingAnswers = false;
     event.target.classList.add('active');
     selectedChoice = event.target;
+    selectedScore = event.target.value;
   }
   // if answer is selected, next button abled
   if (answerButtons = 'active') {
@@ -304,6 +309,7 @@ function showResults () {
   console.log("showResults");
   resultsContainer.classList.remove('hide');
   questionContainer.classList.add('hide');
+
 }
 
 // select help button

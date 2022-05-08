@@ -17,7 +17,7 @@
         <button data-popup-target="#pop-up" id="btn-help"><i class="fa-solid fa-circle-info"></i></button>
     </header>
     <div id="question-container">
-        <div class="question-counter-container">
+        <div id="question-counter-container">
             <p id="question-counter-heading">
                 Question:
             </p>
@@ -25,19 +25,25 @@
                 0/8
             </p>
         </div>
-        <div>
-            <h2 id="question">Question</h2>
-            <div id="answer-form" class="btn-grid">
-                <button id="answer-1" class="btn btn-answer">Answer 1</button>
-                <button id="answer-2" class="btn btn-answer">Answer 2</button>
-                <button id="answer-3" class="btn btn-answer">Answer 3</button>
-                <button id="answer-4" class="btn btn-answer">Answer 4</button>
+        <div id="question-image-div">
+            <div id="question-div">
+                <h2 id="question">Question</h2>
+                <div id="answer-form">
+                    <div class="btn-grid">
+                        <button id="answer-1" class="btn btn-answer">Answer 1</button>
+                        <button id="answer-2" class="btn btn-answer">Answer 2</button>
+                        <button id="answer-3" class="btn btn-answer">Answer 3</button>
+                        <button id="answer-4" class="btn btn-answer">Answer 4</button>
+                    </div>
+                </div>
             </div>
-            <img id="question-image" src="" alt="">
+                <img id="question-image" src="" alt="">
         </div>
-        <button class="btn" id="btn-reset-question">Reset Question</button>
-        <button class="btn" id="btn-forward">Next</button>
-        <button class="btn" id="btn-submit">Submit</button>
+        <div class="button-container">
+            <button class="btn" id="btn-reset-question">Reset Question</button>
+            <button class="btn" id="btn-forward">Next</button>
+            <button class="btn" id="btn-submit">Submit</button>
+        </div>
     </div>
 
     <!--help pop up-->
