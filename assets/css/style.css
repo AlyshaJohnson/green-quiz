@@ -64,7 +64,7 @@ h1, h2 {
     background-color: #efefef;
 }
 
-.btn:hover {
+.btn:hover, .btn:active {
     background-color: #13443e;
     color: #efefef;
 }

@@ -180,7 +180,7 @@ let questions = [{
 
 // get elements
 let nextButton = document.getElementById('btn-forward');
-let backButton = document.getElementById('btn-back');
+let resetQuestionButton = document.getElementById('btn-reset-question');
 let submitButton = document.getElementById('btn-submit');
 let helpButton = document.getElementById('btn-help');
 let questionElement = document.getElementById('question');
@@ -188,11 +188,12 @@ let answerElement = document.getElementById('answer-form');
 let closeButton = document.getElementById('close-btn');
 let popUp = document.getElementById('pop-up');
 let overlay = document.getElementById('overlay');
-let counterContainer = document.getElementById('question-counter')
-let noOfQuestions = questions.length
-let image = document.getElementById('question-image')
+let counterContainer = document.getElementById('question-counter');
+let noOfQuestions = questions.length;
+let image = document.getElementById('question-image');
+let answerButtons = document.getElementsByClassName('btn-answer');
 
-let shuffledQuestions, currentQuestionIndex, score, counter;
+let shuffledQuestions, currentQuestionIndex, score, counter, acceptingAnswers, selectedChoice;
 
 // start quiz on load
 window.addEventListener('load', loadQuiz);
@@ -206,7 +207,7 @@ function loadQuiz() {
 function initEventListeners() {
   // button actions
   nextButton.addEventListener('click', nextQuestion);
-  backButton.addEventListener('click', previousQuestion);
+  resetQuestionButton.addEventListener('click', resetQuestion);
   submitButton.addEventListener('click', submitQuiz)
   helpButton.addEventListener('click', selectHelpButton);
   closeButton.addEventListener('click', closeHelp);
@@ -224,6 +225,7 @@ function startQuiz() {
   currentQuestionIndex = 0;
   counter = 0;
   score = 0;
+  acceptingAnswers = true;
   nextQuestion();
 }
 
@@ -260,27 +262,39 @@ function showNextQuestion(question) {
 }
 
 // on click resets colour of all answer buttons to neutral, selected button changes colour and answer used for score.
-function selectAnswer() {
-  answerButtons.classList.add('active');
+function selectAnswer(event) {
+  if (acceptingAnswers == true) {
+      acceptingAnswers = false;
+      event.target.classList.add('active');
+      selectedChoice = event.target;
+  }
 }
 
-// block user from submitting no answer
-
+// reset question
+function resetQuestion() {
+  console.log('resetQuestion');
+  acceptingAnswers = true;
+  selectedChoice.classList.remove('active');
+}
 
 // submit quiz
 function submitQuiz() {
   console.log('submitQuiz');
-
+  // score counter
+  // block user from submitting no answer
+  if (acceptingAnswers && counter !== 0) {
+  return;
+  }
+  if (selectedChoice !== undefined) {
+  selectedChoice.classList.remove("selectedChoice");
+  }
+  // reset question selection
+  resetQuestion();
 }
 
 // count score - need to check love maths example
 
 // show results
-
-// load previous question - optional at this point
-function previousQuestion() {
-  console.log('previousQuestion');
-}
 
 // select help button
 function selectHelpButton() {
