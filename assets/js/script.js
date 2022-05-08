@@ -191,7 +191,9 @@ let overlay = document.getElementById('overlay');
 let counterContainer = document.getElementById('question-counter');
 let noOfQuestions = questions.length;
 let image = document.getElementById('question-image');
-let answerButtons = document.getElementsByClassName('btn-answer');
+let answerButtons = document.getElementsByClassName('.btn-answer');
+let resultsContainer = document.getElementById('results-container');
+let questionContainer = document.getElementById('question-container')
 
 let shuffledQuestions, currentQuestionIndex, score, counter, acceptingAnswers, selectedChoice;
 
@@ -225,7 +227,6 @@ function startQuiz() {
   currentQuestionIndex = 0;
   counter = 0;
   score = 0;
-  acceptingAnswers = true;
   nextQuestion();
 }
 
@@ -234,6 +235,12 @@ function nextQuestion() {
   console.log('nextQuestion');
   showNextQuestion(shuffledQuestions[currentQuestionIndex]);
   currentQuestionIndex++;
+  nextButton.disabled = true;
+  submitButton.disabled = true;
+  acceptingAnswers = true;
+  if (selectedChoice !== undefined){
+    selectedChoice.classList.remove('active');
+  };
 }
 
 // show next question
@@ -259,14 +266,21 @@ function showNextQuestion(question) {
   // progress counter
   counter++;
   counterContainer.innerText = `${counter}/${noOfQuestions}`;
+  // score = score + question.answer.score
+  console.log(selectedChoice);
 }
 
-// on click resets colour of all answer buttons to neutral, selected button changes colour and answer used for score.
+// selected button changes colour and answer used for score.
 function selectAnswer(event) {
   if (acceptingAnswers == true) {
-      acceptingAnswers = false;
-      event.target.classList.add('active');
-      selectedChoice = event.target;
+    acceptingAnswers = false;
+    event.target.classList.add('active');
+    selectedChoice = event.target;
+  }
+  // if answer is selected, next button abled
+  if (answerButtons = 'active') {
+    nextButton.disabled = false;
+    submitButton.disabled = false;
   }
 }
 
@@ -281,20 +295,16 @@ function resetQuestion() {
 function submitQuiz() {
   console.log('submitQuiz');
   // score counter
-  // block user from submitting no answer
-  if (acceptingAnswers && counter !== 0) {
-  return;
-  }
-  if (selectedChoice !== undefined) {
-  selectedChoice.classList.remove("selectedChoice");
-  }
-  // reset question selection
-  resetQuestion();
+
+  showResults();
 }
 
-// count score - need to check love maths example
-
 // show results
+function showResults () {
+  console.log("showResults");
+  resultsContainer.classList.remove('hide');
+  questionContainer.classList.add('hide');
+}
 
 // select help button
 function selectHelpButton() {
