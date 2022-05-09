@@ -200,7 +200,11 @@ let noOfQuestions = questions.length;
 let image = document.getElementById('question-image');
 let answerButtons = document.getElementsByClassName('.btn-answer');
 let resultsContainer = document.getElementById('results-container');
-let questionContainer = document.getElementById('question-container')
+let questionContainer = document.getElementById('question-container');
+let showScore = document.getElementById('show-score');
+let resultsDescription = document.getElementById('results-description');
+let resultsSuggestion = document.getElementById('results-suggestion');
+let resultsName = document.getElementById('results-name');
 
 let shuffledQuestions, currentQuestionIndex, score, counter, acceptingAnswers, selectedChoice, selectedScore;
 
@@ -315,8 +319,25 @@ function showResults() {
   console.log("showResults");
   resultsContainer.classList.remove('hide');
   questionContainer.classList.add('hide');
-
+  // show score
+  showScore.innerText = "You've scored " + score + " out of 32!";
+  // 
+  if (score < 11) {
+    resultsName.innerText = "Starting out on your green journey";
+    resultsDescription.innerText = "It seems that maybe the environment is not your biggest priority right now. However, you have taken the quiz so its a good start! Please read the suggestions and it will get you started!";
+    resultsSuggestion.innerText = "suggestions";
+  } else if (score > 21) {
+    resultsName.innerText = "An eco-warrior";
+    resultsDescription.innerText = "You're a keen-bean, green machine! You love the environment and you're doing as much as you can to help keep it safe.";
+    resultsSuggestion.innerText = "suggestions";
+  } else {
+    resultsName.innerText = "Mid-range Greeny";
+    resultsDescription.innerText = "You have made a good start at doing your bit to save the planet.";
+    resultsSuggestion.innerText = "suggestions";
+  };
 }
+
+// select restart button
 
 // select help button
 function selectHelpButton() {

@@ -37,7 +37,7 @@
                     </div>
                 </div>
             </div>
-                <img id="question-image" src="" alt="">
+            <img id="question-image" src="" alt="">
         </div>
         <div class="button-container">
             <button class="btn" id="btn-reset-question">Reset Question</button>
@@ -61,40 +61,47 @@
 
     <!--results container-->
     <div id="results-container" class="hide">
-        <div>
-            <h2>Results</h2>
-            <p>score</p>
-            <p>description</p>
-            <p>suggestions</p>
+        <div id="results-form-socials-div">
+            <h2 id="results-title">Results</h2>
+            <div id="results-div">
+                <p id="show-score">score</p>
+                <p id="results-name">results name</p>
+                <p id="results-description">description</p>
+                <p id="results-suggestion">suggestions</p>
+            </div>
+            <button class="btn" id="btn-restart">Restart Quiz</button>
+            <div id="form-div">
+                <form action="">
+                    <p>You can email your results here:</p>
+                    <label for="">Name:</label>
+                    <input type="text">
+                    <label for="">Email:</label>
+                    <input type="email">
+                    <input type="submit" class="btn">
+                </form>
+            </div>
+            <div id="socials-div">
+                <p>Or share on your socials:</p>
+                <ul id="socials">
+                    <li>
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener"
+                            aria-label="Visit our Facebook page (opens in a new tab)"><i
+                                class="fa-brands fa-facebook-square"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener"
+                            aria-label="Visit our Instagram page (opens in a new tab)"><i
+                                class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.twitter.com/" target="_blank" rel="noopener"
+                            aria-label="Visit our TikTok page (opens in a new tab)"><i
+                                class="fa-brands fa-twitter"></i></a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <form action="">
-            <p>You can email your results here:</p>
-            <label for="">Name:</label>
-            <input type="text">
-            <label for="">Email:</label>
-            <input type="email">
-            <input type="submit">
-        </form>
-        <div>
-            <p>Or share on your socials:</p>
-            <ul id="socials">
-                <li>
-                    <a href="https://www.facebook.com/" target="_blank" rel="noopener"
-                        aria-label="Visit our Facebook page (opens in a new tab)"><i
-                            class="fa-brands fa-facebook-square"></i></a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/" target="_blank" rel="noopener"
-                        aria-label="Visit our Instagram page (opens in a new tab)"><i
-                            class="fa-brands fa-instagram"></i></a>
-                </li>
-                <li>
-                    <a href="https://www.twitter.com/" target="_blank" rel="noopener"
-                        aria-label="Visit our TikTok page (opens in a new tab)"><i class="fa-brands fa-twitter"></i></a>
-                </li>
-            </ul>
-        </div>
-        <img src="" alt="">
+        <img id="result-image" src="" alt="">
     </div>
 
     <!--font awesome script-->
