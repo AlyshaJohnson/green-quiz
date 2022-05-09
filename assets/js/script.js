@@ -46,136 +46,142 @@ let questions = [{
     alt: 'Black and blue wheelie bins in front of green foliage.',
   },
   {
-    question: 'Question 3',
+    question: 'What method do you use to take home your groceries?',
     answers: [{
-        text: 'Answer A',
-        score: 2
-      },
-      {
-        text: 'Answer B',
-        score: 1
-      },
-      {
-        text: 'Answer C',
+        text: 'I use my own bags when I remember',
         score: 3
       },
       {
-        text: 'Answer D',
+        text: 'I buy one from the store everytime',
+        score: 1
+      },
+      {
+        text: 'I take my own bags / basket / box',
         score: 4
       },
+      {
+        text: 'I make sure the store I use only provides paper bags',
+        score: 3
+      },
     ],
-    images: './',
-    alt: '',
+    // credit to Awesome Content on pikwizard
+    images: './assets/images/pikwizard-hand-of-a-woman-holding-grocery-bag.jpeg',
+    alt: 'A hand holding a grocery bag',
   },
   {
-    question: 'Question 4',
+    question: 'What is your main mode of transport?',
     answers: [{
-        text: 'Answer A',
-        score: 2
-      },
-      {
-        text: 'Answer B',
-        score: 1
-      },
-      {
-        text: 'Answer C',
+        text: 'Public transport (bus, train, tram, etc.)',
         score: 3
       },
       {
-        text: 'Answer D',
+        text: 'Car / taxi',
+        score: 1
+      },
+      {
+        text: 'Car pool',
+        score: 2
+      },
+      {
+        text: 'Walking / cycling',
         score: 4
       },
     ],
-    images: './',
-    alt: '',
+    // credit to betteratf8 on unsplash
+    images: './assets/images/weston-m-Vckq-heaypg-unsplash.jpeg',
+    alt: 'Sign post showing direction of travel',
   },
   {
-    question: 'Question 5',
+    question: 'When picking cleaning products, how to do you chose?',
     answers: [{
-        text: 'Answer A',
-        score: 2
-      },
-      {
-        text: 'Answer B',
-        score: 1
-      },
-      {
-        text: 'Answer C',
+        text: 'I use refillable cleaning products / eco-friendly solutions',
         score: 3
       },
       {
-        text: 'Answer D',
+        text: 'I try and use environmentally sound cleaning products, but occasionally I get out the bleach and Mr Muscle.',
+        score: 2
+      },
+      {
+        text: 'The cheapest / what is on offer',
+        score: 1
+      },
+      {
+        text: 'White vinegar, baking soda and elbow grease.',
         score: 4
       },
     ],
-    images: './',
-    alt: '',
+    // credit to JESHOOTS on unsplash
+    images: './assets/images/jeshoots-com-__ZMnefoI3k-unsplash.jpeg',
+    alt: 'Cleaning product being sprayed',
   },
   {
-    question: 'Question 6',
+    question: 'What do you do with items you no longer need?',
     answers: [{
-        text: 'Answer A',
-        score: 2
+        text: 'Upcycle what I can, donate / sell the rest',
+        score: 4
       },
       {
-        text: 'Answer B',
-        score: 1
-      },
-      {
-        text: 'Answer C',
+        text: 'Donate them to friends, family charity shops or collection banks',
         score: 3
       },
       {
-        text: 'Answer D',
-        score: 4
+        text: 'Sell what I can and chuck the rest',
+        score: 2
+      },
+      {
+        text: 'Bin them',
+        score: 1
       },
     ],
-    images: './',
-    alt: '',
+    // credit to sweetpagesco on unsplash
+    images: './assets/images/sarah-brown-oa7pqZmmhuA-unsplash.jpeg',
+    alt: 'Sorting clothes items for donation',
   },
   {
-    question: 'Question 7',
+    question: 'What is your diet typically like?',
     answers: [{
-        text: 'Answer A',
-        score: 2
-      },
-      {
-        text: 'Answer B',
+        text: 'Full on carnivore!!',
         score: 1
       },
       {
-        text: 'Answer C',
-        score: 3
+        text: 'Flexitarian - I only eat meat / fish a couple of times a week',
+        score: 2
       },
       {
-        text: 'Answer D',
+        text: 'Full vegan, only buying organic products',
         score: 4
       },
+      {
+        text: 'Vegetarian / Pescetarian',
+        score: 3
+      },
     ],
-    images: './',
-    alt: '',
+    // image from pikwizard
+    images: './assets/images/pikwizard-fruit-food-diet.jpeg',
+    alt: 'variety of fruit and veg',
   },
   {
-    question: 'Question 8',
+    question: 'How consciencous are you with your bills?',
     answers: [{
-        text: 'Answer A',
-        score: 2
+        text: 'I have solar panels or other renewable energy solutions to help reduce my fossil fuel usage',
+        score: 4
       },
       {
-        text: 'Answer B',
-        score: 1
-      },
-      {
-        text: 'Answer C',
+        text: 'I only pick providers that are environmentally conscious and do everything in my power to reduce the amount I use.',
         score: 3
       },
       {
-        text: 'Answer D',
-        score: 4
+        text: 'There are small things I do to reduce my bills, such as switching off lights, wearing jumpers when its cold, etc.',
+        score: 2
+      },
+      {
+        text: 'I go with what is cheapest on the comparison site',
+        score: 1
       },
     ],
-    images: './',
-    alt: '',
+    // credit to Awesome Content on pikwizard
+    images: './assets/images/pikwizard-miniature-house-with-energy-efficiency-rating-chart.jpeg',
+    alt: 'Miniture wooden house with energy efficiency rating chart',
   }
 ]
 
@@ -217,7 +223,7 @@ function initEventListeners() {
 
   //add event listeners to answer buttons
   for (let i = 0; i < 4; i++) {
-    document.getElementById("answer-"+(i + 1)).addEventListener('click', selectAnswer);
+    document.getElementById("answer-" + (i + 1)).addEventListener('click', selectAnswer);
   }
 }
 
@@ -239,7 +245,7 @@ function nextQuestion() {
   nextButton.disabled = true;
   submitButton.disabled = true;
   acceptingAnswers = true;
-  if (selectedChoice !== undefined){
+  if (selectedChoice !== undefined) {
     selectedChoice.classList.remove('active');
   };
 }
@@ -251,8 +257,8 @@ function showNextQuestion(question) {
   questionElement.innerText = question.question;
   // show answer from array
   question.answers.forEach((answer, i) => {
-    document.getElementById('answer-'+(i+1)).innerText = answer.text;
-    document.getElementById('answer-'+(i+1)).value = answer.score;
+    document.getElementById('answer-' + (i + 1)).innerText = answer.text;
+    document.getElementById('answer-' + (i + 1)).value = answer.score;
   });
   //show image and alt from array
   image.src = question.images;
@@ -300,12 +306,12 @@ function resetQuestion() {
 function submitQuiz() {
   console.log('submitQuiz');
   // score counter
-
+  console.log(score);
   showResults();
 }
 
 // show results
-function showResults () {
+function showResults() {
   console.log("showResults");
   resultsContainer.classList.remove('hide');
   questionContainer.classList.add('hide');

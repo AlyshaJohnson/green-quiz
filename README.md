@@ -122,6 +122,7 @@ https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj#:~:text=Custo
 The photos used throughout the quiz are stock imagery from the following services:
   - [unsplash] (https://unsplash.com/)
   - [FreeImages] (https://www.freeimages.com/)
+  - [PikWizard] (https://pikwizard.com/)
 
 ## Other General Project Advice
 

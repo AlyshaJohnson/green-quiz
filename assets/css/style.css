@@ -44,7 +44,7 @@ h1, h2 {
     background-color: inherit;
 }
 
-/* question and results container */
+/* quiz styling */
 #question-container, #results-container {
     width: 90%;
     background: #F4D1AF;
@@ -57,6 +57,7 @@ h1, h2 {
     display: flex;
     margin-bottom: 5px;
     margin-left: 90%;
+    font-size: 1.2em;
 }
 
 #question-counter-heading {
@@ -67,6 +68,11 @@ h1, h2 {
     width: 70%;
     text-align: center;
     margin: auto 0;
+}
+
+#question {
+    padding-bottom: 5px;
+    text-align: center;
 }
 
 #question-image-div {
@@ -81,9 +87,10 @@ h1, h2 {
 /* image sizing and positioning */
 img {
     height: inherit;
-    width: 250px;
+    width: 300px;
     max-width: 90%;
     margin: auto 0;
+    border-radius: 50% 50%;
 }
 
 /* buttons */
@@ -118,18 +125,19 @@ img {
     display: none;
 }
 
-/* pop up */
+/* pop up styling */
 #pop-up {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    background-color: white;
+    transform: translate(-30%, -50%) scale(0);
+    background-color: #efefef;
+    color: #13443e;
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
     z-index: 10;
-    width: 500px;
+    width: 700px;
     max-width: 80%;
 }
 
@@ -145,7 +153,7 @@ img {
 }
 
 #close-btn {
-    font-size: 1em;
+    font-size: 1.1em;
     background-color: inherit;
     color: #13443e;
     width: 30px;
@@ -173,3 +181,4 @@ img {
     pointer-events: all;
 }
 
+/* results styling */
