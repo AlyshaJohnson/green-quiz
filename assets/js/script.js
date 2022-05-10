@@ -305,6 +305,8 @@ function resetQuestion() {
   console.log('resetQuestion');
   acceptingAnswers = true;
   selectedChoice.classList.remove('active');
+  nextButton.disabled = true;
+  submitButton.disabled = true;
 }
 
 // submit quiz
