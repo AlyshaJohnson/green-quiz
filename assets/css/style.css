@@ -250,13 +250,13 @@ video {
 #results-form-socials-div {
     display: grid;
     height: auto;
-    width: 70%;
+    width: 90%;
     text-align: center;
-    margin: auto 0;
+    margin: auto;
 }
 
 #result-image {
-    height: inherit;
+    height: 300px;
     width: 300px;
     max-width: 90%;
     margin: auto 0;
@@ -295,7 +295,19 @@ video {
     text-align: center;
 }
 
-#show-score, #results-name, #results-description, #results-suggestion {
+#show-score, #results-name {
+    font-size: 2em;
+}
+
+#results-suggestion {
     font-size: 1.2em;
     margin: 5px;
+}
+
+#results-suggestion a {
+    font-weight: 500;
+}
+
+#results-suggestion:hover a {
+    border-bottom: #13443e 1px solid;
 }

@@ -3,19 +3,19 @@ let questions = [{
     question: 'What type of car do you drive?',
     answers: [{
         text: 'Full plug-in electric',
-        score: 3
+        score: '3',
       },
       {
         text: 'Petrol / Diesel',
-        score: 1
+        score: '1',
       },
       {
         text: 'Hybrid / alternate fuel',
-        score: 2
+        score: '2',
       },
       {
         text: 'I do not own a car / I use public transport',
-        score: 4
+        score: '4',
       },
     ],
     // credit to bjearwicke on freeimages
@@ -26,19 +26,19 @@ let questions = [{
     question: 'What level of recycling do you currently do?',
     answers: [{
         text: 'I only fill up the general waste bin / I do not have a recycling bin.',
-        score: 1
+        score: 1,
       },
       {
         text: 'I actively reduce the amount that goes into the general waste bin by recyling, composting and using local services to reduce waste.',
-        score: 4
+        score: 4,
       },
       {
         text: 'My recycling bin and general waste bin are used at the same rate',
-        score: 2
+        score: 2,
       },
       {
         text: 'More goes into the recycling bin than the general waste bin',
-        score: 3
+        score: 3,
       },
     ],
     // credit to @sigmund on unsplash
@@ -49,19 +49,19 @@ let questions = [{
     question: 'What method do you use to take home your groceries?',
     answers: [{
         text: 'I use my own bags when I remember',
-        score: 3
+        score: 3,
       },
       {
         text: 'I buy one from the store everytime',
-        score: 1
+        score: 1,
       },
       {
         text: 'I take my own bags / basket / box',
-        score: 4
+        score: 4,
       },
       {
         text: 'I make sure the store I use only provides paper bags',
-        score: 3
+        score: 3,
       },
     ],
     // credit to Awesome Content on pikwizard
@@ -72,19 +72,19 @@ let questions = [{
     question: 'What is your main mode of transport?',
     answers: [{
         text: 'Public transport (bus, train, tram, etc.)',
-        score: 3
+        score: 3,
       },
       {
         text: 'Car / taxi',
-        score: 1
+        score: 1,
       },
       {
         text: 'Car pool',
-        score: 2
+        score: 2,
       },
       {
         text: 'Walking / cycling',
-        score: 4
+        score: 4,
       },
     ],
     // credit to betteratf8 on unsplash
@@ -95,19 +95,19 @@ let questions = [{
     question: 'When picking cleaning products, how do you chose?',
     answers: [{
         text: 'I use refillable cleaning products / eco-friendly solutions',
-        score: 3
+        score: 3,
       },
       {
         text: 'I try and use environmentally sound cleaning products, but occasionally I get out the bleach and Mr Muscle.',
-        score: 2
+        score: 2,
       },
       {
         text: 'The cheapest / what is on offer',
-        score: 1
+        score: 1,
       },
       {
         text: 'White vinegar, baking soda and elbow grease.',
-        score: 4
+        score: 4,
       },
     ],
     // credit to JESHOOTS on unsplash
@@ -118,19 +118,19 @@ let questions = [{
     question: 'What do you do with items you no longer need?',
     answers: [{
         text: 'Upcycle what I can, donate / sell the rest',
-        score: 4
+        score: 4,
       },
       {
         text: 'Donate them to friends, family charity shops or collection banks',
-        score: 3
+        score: 3,
       },
       {
         text: 'Sell what I can and chuck the rest',
-        score: 2
+        score: 2,
       },
       {
         text: 'Bin them',
-        score: 1
+        score: 1,
       },
     ],
     // credit to sweetpagesco on unsplash
@@ -141,19 +141,19 @@ let questions = [{
     question: 'What is your diet typically like?',
     answers: [{
         text: 'Full on carnivore!!',
-        score: 1
+        score: 1,
       },
       {
         text: 'Flexitarian - I only eat meat / fish a couple of times a week',
-        score: 2
+        score: 2,
       },
       {
         text: 'Full vegan, only buying organic products',
-        score: 4
+        score: 4,
       },
       {
         text: 'Vegetarian / Pescetarian',
-        score: 3
+        score: 3,
       },
     ],
     // image from pikwizard
@@ -164,19 +164,19 @@ let questions = [{
     question: 'How conscientious are you with your bills?',
     answers: [{
         text: 'I have solar panels or other renewable energy solutions to help reduce my fossil fuel usage',
-        score: 4
+        score: 4,
       },
       {
         text: 'I only pick providers that are environmentally conscious and do everything in my power to reduce the amount I use.',
-        score: 3
+        score: 3,
       },
       {
         text: 'There are small things I do to reduce my bills, such as switching off lights, wearing jumpers when its cold, etc.',
-        score: 2
+        score: 2,
       },
       {
         text: 'I go with what is cheapest on the comparison site',
-        score: 1
+        score: 1,
       },
     ],
     // credit to Awesome Content on pikwizard
@@ -213,7 +213,6 @@ let counterContainer = document.getElementById('question-counter');
 let noOfQuestions = questions.length;
 let image = document.getElementById('question-image');
 let answerButtons = document.getElementsByClassName('.btn-answer');
-let resultsContainer = document.getElementById('results-container');
 let questionContainer = document.getElementById('question-container');
 
 // get help pop-up elements
@@ -228,10 +227,9 @@ let instructionLength = instructions.length - 1;
 
 // get results page elements
 let showScore = document.getElementById('show-score');
-let resultsDescription = document.getElementById('results-description');
-let resultsSuggestion = document.getElementById('results-suggestion');
 let resultsName = document.getElementById('results-name');
-let resultsImage = document.getElementById('result-image');
+let resultsContainer = document.getElementById('results-container');
+let resultsImage = document.getElementById('result-image')
 
 // other variables
 let shuffledQuestions, currentQuestionIndex, score, counter, acceptingAnswers, selectedChoice, selectedScore, currentInstructionIndex;
@@ -268,6 +266,7 @@ function startQuiz() {
   currentQuestionIndex = 0;
   counter = 0;
   score = 0;
+  selectedScore = 0;
   nextQuestion();
 }
 
@@ -309,9 +308,8 @@ function showNextQuestion(question) {
   counter++;
   counterContainer.innerText = `${counter}/${noOfQuestions}`;
   // score = score + question.answer.score
-  console.log(selectedScore);
-  console.log(score);
-  score = parseInt(score) + parseInt(selectedScore);
+  score += selectedScore;
+  console.log("score = " + score)
 }
 
 // selected button changes colour and answer used for score.
@@ -320,7 +318,7 @@ function selectAnswer(event) {
     acceptingAnswers = false;
     event.target.classList.add('active');
     selectedChoice = event.target;
-    selectedScore = event.target.value;
+    selectedScore = parseFloat(event.target.value);
   }
   // if answer is selected, next button abled
   if (answerButtons = 'active') {
@@ -353,24 +351,18 @@ function showResults() {
   questionContainer.classList.add('hide');
   // show score
   showScore.innerText = "You've scored " + score + " out of 32!";
-  if (score < 11) {
-    resultsName.innerText = "Starting out on your green journey";
-    resultsDescription.innerText = "It seems that maybe the environment is not your biggest priority right now. However, you have taken the quiz so its a good start! Please read the suggestions and it will get you started!";
-    resultsSuggestion.innerText = "suggestions";
+  if (score <= 11) {
+    resultsName.innerText = "A Sapling";
     // credit to jb_charrat on unsplash
     resultsImage.src = "./assets/images/jean-baptiste-charrat-F5s2rcNtSi0-unsplash.jpeg";
     resultsImage.alt = "Young evergreen sapling";
-  } else if (score > 21) {
-    resultsName.innerText = "An eco-warrior";
-    resultsDescription.innerText = "You're a keen-bean, green machine! You love the environment and you're doing as much as you can to help keep it safe.";
-    resultsSuggestion.innerText = "suggestions";
+  } else if (score >= 25) {
+    resultsName.innerText = "An Eco-warrior";
     // credit to andrewcoelho on unsplash
     resultsImage.src = "./assets/images/andrew-coelho-aL7SA1ASVdQ-unsplash.jpeg";
     resultsImage.alt = "Evergreen forest with mist";
   } else {
-    resultsName.innerText = "Mid-range Greeny";
-    resultsDescription.innerText = "You are somewhere between light and forest green. You've made a great start at doing your bit to save the planet.";
-    resultsSuggestion.innerText = "suggestions";
+    resultsName.innerText = "A Mid-range Greenie";
     // credit to alexbelogub on unsplash
     resultsImage.src = "./assets/images/alex-belogub-SIXwWblOzOw-unsplash.jpeg";
     resultsImage.alt = "Small evergreen trees eclipsed by the rest of the forest";
