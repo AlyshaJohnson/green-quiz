@@ -1,10 +1,36 @@
 # Green Quiz
 
-In this section, you will include one or two paragraphs providing an overview of your project. Essentially, this part is your sales pitch. At this stage, you should have a name for your project so use it! Don’t introduce the project as a Portfolio project for the diploma. In this section, describe what the project hopes to accomplish, who it is intended to target and how it will be useful to the target audience. 
+The purpose of this web application is for a user to understand how environmentally friendly they are. Through answering a series of questions, a score is returned and a description of 'how green' the user is is determined.
 
-For example; Love Running is a site that hopes to help keep people motivated to meet up for runs on a regular basis in Dublin, Ireland. The site will be targeted toward runners who are looking for a way to socialise and keep themselves fit. Love Running will be useful for runners to see exactly when and where they should be to join the running club. 
+This quiz aims to increase their awareness on things they could be doing to reduce their impact on the environment. The target audience for the quiz is anyone who would like to understand what their current impact is and recieve suggestions on how to reduce this.
 
 ![Responsive Mockup](https://github.com/lucyrush/readme-template/blob/master/media/love_running_mockup.png)
+
+## Design and Development
+
+For the design of this quiz, the 5 pillars of User Experience Design (UXD) were used to cover the strategy, scope, structure, skeleton and surface to make sure the design is intuitive, simple and enjoyable. 
+
+### Strategy
+
+
+
+Research was conducted on similar quizzes to understand 
+
+### Scope
+
+
+
+### Structure
+
+
+
+### Skeleton
+
+
+
+### Surface
+
+
 
 ## Features 
 
@@ -66,7 +92,10 @@ In addition, you may also use this section to discuss plans for additional featu
 
 ### Features Left to Implement
 
-- Another feature idea
+- Back button feature to navigate back through the quiz
+- Integrate it into previous project website
+- Randomise answer array
+- more questions
 
 ## Testing 
 
@@ -100,19 +129,17 @@ Errors / bug fixes:
 
 ### Unfixed Bugs
 
-You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed. 
+- instructions - not able to move through videos
+- UI on phones
 
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub) 
-
-- The site was deployed to GitHub pages. The steps to deploy are as follows: 
+The 'Green Quiz' was deployed to GitHub pages. The steps to deploy are as follows: 
   - In the GitHub repository, navigate to the Settings tab 
   - From the source section drop-down menu, select the Master Branch
   - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
 
-The live link can be found here - https://code-institute-org.github.io/love-running-2.0/index.html 
-
+The live link can be found here - https://alyshajohnson.github.io/green-quiz/
 
 ## Credits 
 
@@ -136,15 +163,7 @@ The photos used throughout the quiz are stock imagery from the following service
   - [FreeImages] (https://www.freeimages.com/)
   - [PikWizard] (https://pikwizard.com/)
 
-## Other General Project Advice
-
-Below you will find a couple of extra tips that may be helpful when completing your project. Remember that each of these projects will become part of your final portfolio so it’s important to allow enough time to showcase your best work! 
-
-- One of the most basic elements of keeping a healthy commit history is with the commit message. When getting started with your project, read through [this article](https://chris.beams.io/posts/git-commit/) by Chris Beams on How to Write  a Git Commit Message 
-  - Make sure to keep the messages in the imperative mood 
-
-- When naming the files in your project directory, make sure to consider meaningful naming of files, point to specific names and sections of content.
-  - For example, instead of naming an image used ‘image1.png’ consider naming it ‘landing_page_img.png’. This will ensure that there are clear file paths kept. 
+The videos as part of the help feature, were recorded and edited by the developer.
 
 - Do some extra research on good and bad coding practices, there are a handful of useful articles to read, consider reviewing the following list when getting started:
   - [Writing Your Best Code](https://learn.shayhowe.com/html-css/writing-your-best-code/)

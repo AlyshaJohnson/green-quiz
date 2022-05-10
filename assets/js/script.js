@@ -29,15 +29,15 @@ let questions = [{
         score: 1,
       },
       {
-        text: 'I actively reduce the amount that goes into the general waste bin by recyling, composting and using local services to reduce waste.',
+        text: 'I actively reduce the amount that goes to landfill by recyling, composting and using local services.',
         score: 4,
       },
       {
-        text: 'My recycling bin and general waste bin are used at the same rate',
+        text: 'My recycling and general waste bins are filled at the same rate.',
         score: 2,
       },
       {
-        text: 'More goes into the recycling bin than the general waste bin',
+        text: 'More goes into the recycling bin than the general waste bin.',
         score: 3,
       },
     ],
@@ -48,19 +48,19 @@ let questions = [{
   {
     question: 'What method do you use to take home your groceries?',
     answers: [{
-        text: 'I use my own bags when I remember',
+        text: 'I use my own bags when I remember.',
         score: 3,
       },
       {
-        text: 'I buy one from the store everytime',
+        text: 'I buy one from the store everytime.',
         score: 1,
       },
       {
-        text: 'I take my own bags / basket / box',
+        text: 'I take my own bags / basket / box.',
         score: 4,
       },
       {
-        text: 'I make sure the store I use only provides paper bags',
+        text: 'I make sure the store I use only provides paper bags.',
         score: 3,
       },
     ],
@@ -71,19 +71,19 @@ let questions = [{
   {
     question: 'What is your main mode of transport?',
     answers: [{
-        text: 'Public transport (bus, train, tram, etc.)',
+        text: 'Public transport (bus, train, tram, etc.).',
         score: 3,
       },
       {
-        text: 'Car / taxi',
+        text: 'Car / taxi.',
         score: 1,
       },
       {
-        text: 'Car pool',
+        text: 'Car pool.',
         score: 2,
       },
       {
-        text: 'Walking / cycling',
+        text: 'Walking / cycling.',
         score: 4,
       },
     ],
@@ -94,15 +94,15 @@ let questions = [{
   {
     question: 'When picking cleaning products, how do you chose?',
     answers: [{
-        text: 'I use refillable cleaning products / eco-friendly solutions',
+        text: 'I use refillable cleaning products / eco-friendly solutions.',
         score: 3,
       },
       {
-        text: 'I try and use environmentally sound cleaning products, but occasionally I get out the bleach and Mr Muscle.',
+        text: 'I try and use environmentally friendly cleaning products, but occasionally use bleach.',
         score: 2,
       },
       {
-        text: 'The cheapest / what is on offer',
+        text: 'The cheapest / what is on offer.',
         score: 1,
       },
       {
@@ -117,19 +117,19 @@ let questions = [{
   {
     question: 'What do you do with items you no longer need?',
     answers: [{
-        text: 'Upcycle what I can, donate / sell the rest',
+        text: 'Upcycle what I can, donate / sell the rest.',
         score: 4,
       },
       {
-        text: 'Donate them to friends, family charity shops or collection banks',
+        text: 'Donate them to friends, family charity shops or collection banks.',
         score: 3,
       },
       {
-        text: 'Sell what I can and chuck the rest',
+        text: 'Sell what I can and chuck the rest.',
         score: 2,
       },
       {
-        text: 'Bin them',
+        text: 'Bin them.',
         score: 1,
       },
     ],
@@ -144,15 +144,15 @@ let questions = [{
         score: 1,
       },
       {
-        text: 'Flexitarian - I only eat meat / fish a couple of times a week',
+        text: 'Flexitarian - I only eat meat / fish a couple of times a week.',
         score: 2,
       },
       {
-        text: 'Full vegan, only buying organic products',
+        text: 'Full vegan, only buying organic products.',
         score: 4,
       },
       {
-        text: 'Vegetarian / Pescetarian',
+        text: 'Vegetarian / Pescetarian.',
         score: 3,
       },
     ],
@@ -163,11 +163,11 @@ let questions = [{
   {
     question: 'How conscientious are you with your bills?',
     answers: [{
-        text: 'I have solar panels or other renewable energy solutions to help reduce my fossil fuel usage',
+        text: 'I have solar panels or other renewable energy solutions to help reduce my fossil fuel usage.',
         score: 4,
       },
       {
-        text: 'I only pick providers that are environmentally conscious and do everything in my power to reduce the amount I use.',
+        text: 'I only pick environmentally conscious providers and do everything in my power to reduce the amount I use.',
         score: 3,
       },
       {
@@ -175,7 +175,7 @@ let questions = [{
         score: 2,
       },
       {
-        text: 'I go with what is cheapest on the comparison site',
+        text: 'I go with what is cheapest on the comparison site.',
         score: 1,
       },
     ],
