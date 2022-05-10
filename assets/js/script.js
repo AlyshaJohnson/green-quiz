@@ -185,29 +185,61 @@ let questions = [{
   }
 ]
 
-// get elements
+//instructions
+let instructions = [{
+  instructionText: 'Read the question and select the button with the most appropriate answer.',
+  video: "./assets/videos/instruction1.webm/",
+},
+{
+  instructionText: "The selected answer will turn green and the next button will become active to allow you to move onto the next question.",
+  video: "./assets/videos/instruction2.mp4/",
+},
+{
+  instructionText: "If you want to change your answer, please use the reset question button which will allow you to amend your answer.",
+  video: "./assets/videos/instruction3.mp4/",
+},
+{
+  instructionText: "The question counter in the top right hand corner, lets you know your progress through the quiz.",
+  video: "./assets/videos/instruction4.mp4/",
+},
+{
+  instructionText: "On the last question, the 'submit' button appears allowing you to submit your answers and get your result!",
+  video: "./assets/videos/instruction5.mp4/",
+}]
+
+// get question page elements
 let nextButton = document.getElementById('btn-forward');
 let resetQuestionButton = document.getElementById('btn-reset-question');
 let submitButton = document.getElementById('btn-submit');
 let helpButton = document.getElementById('btn-help');
 let questionElement = document.getElementById('question');
 let answerElement = document.getElementById('answer-form');
-let closeButton = document.getElementById('close-btn');
-let popUp = document.getElementById('pop-up');
-let overlay = document.getElementById('overlay');
 let counterContainer = document.getElementById('question-counter');
 let noOfQuestions = questions.length;
 let image = document.getElementById('question-image');
 let answerButtons = document.getElementsByClassName('.btn-answer');
 let resultsContainer = document.getElementById('results-container');
 let questionContainer = document.getElementById('question-container');
+
+// get help pop-up elements
+let closeButton = document.getElementById('close-btn');
+let popUp = document.getElementById('pop-up');
+let overlay = document.getElementById('overlay');
+let instructionText = document.getElementById('instruction');
+let instructionVideo = document.getElementById('instruction-video');
+let instructionLeft = document.getElementById('instruction-btn-left');
+let instructionRight = document.getElementById('instruction-btn-right');
+let instructionLength = instructions.length - 1;
+
+// get results page elements
 let showScore = document.getElementById('show-score');
 let resultsDescription = document.getElementById('results-description');
 let resultsSuggestion = document.getElementById('results-suggestion');
 let resultsName = document.getElementById('results-name');
-let resultsImage = document.getElementById('result-image')
+let resultsImage = document.getElementById('result-image');
 
-let shuffledQuestions, currentQuestionIndex, score, counter, acceptingAnswers, selectedChoice, selectedScore;
+// other variables
+let shuffledQuestions, currentQuestionIndex, score, counter, acceptingAnswers, selectedChoice, selectedScore, currentInstructionIndex;
 
 // start quiz on load
 window.addEventListener('load', loadQuiz);
@@ -225,6 +257,8 @@ function initEventListeners() {
   submitButton.addEventListener('click', submitQuiz)
   helpButton.addEventListener('click', selectHelpButton);
   closeButton.addEventListener('click', closeHelp);
+  instructionLeft.addEventListener('click', nextInstruction);
+  instructionRight.addEventListener('click', prevInstruction);
 
   //add event listeners to answer buttons
   for (let i = 0; i < 4; i++) {
@@ -346,13 +380,41 @@ function showResults() {
   };
 }
 
-// select restart button
-
 // select help button
 function selectHelpButton() {
   console.log('selectHelpButton');
   popUp.classList.add('active');
   overlay.classList.add('active');
+  currentInstructionIndex = 0;
+  showInstruction()
+}
+
+// start instruction
+function changeImage(x) {
+  currentInstructionIndex += x;
+  if (currentInstructionIndex > instructionLength) {
+    currentInstructionIndex = 0;
+  }
+  if (currentInstructionIndex < instructionLength) {
+    prevInstruction.disabled = true;
+  }
+  showInstruction()
+}
+
+// show instruction
+function showInstruction() {
+  instructionText.innertext = instructions.instructionText;
+  instructionVideo.src = instructions.video;
+}
+
+// next instruction
+function nextInstruction() {
+  changeImage(1);
+}
+
+// previous instruction
+function prevInstruction() {
+  changeImage(-1);
 }
 
 // close help

@@ -70,14 +70,16 @@ In addition, you may also use this section to discuss plans for additional featu
 
 ## Testing 
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your project’s features and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+### Initial Developer Testing
 
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+Throughout project as developing quiz
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+The development of this app was conducted on Google Chrome, therefore extensive testing was conducted on this broswer. This was used as a benchmark against Firefox, IE and Safari.
 
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
-
+The elements of testing conducted on each browser are:
+- User Experience - what does the quiz look like; is the flow through the quiz the same; are all elements where they are expected?
+- Functionality - do the buttons work as expected; does the question counter count?
+- Other - this includes spelling and grammatical errors.
 
 ### Validator Testing 
 
@@ -85,6 +87,16 @@ If this section grows too long, you may want to split it off into a separate fil
   - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcode-institute-org.github.io%2Flove-running-2.0%2Findex.html)
 - CSS
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3Dhttps%253A%252F%252Fcode-institute-org.github.io%252Flove-running-2.0%252Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#css)
+
+### User Testing
+This app has been tested by a small group of users in which some feedback was captured in the design and some errors in functionality and spelling were corrected.
+
+UI improvements made:
+- Addition of icons on quiz navigation buttons.
+
+Errors / bug fixes:
+- On question reset, the 'Next' button was still active.
+- General spelling errors throughout quiz.
 
 ### Unfixed Bugs
 

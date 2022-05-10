@@ -23,6 +23,11 @@ h1, h2 {
     color: #13443e;
 }
 
+a {
+    text-decoration: none;
+    color: inherit
+}
+
 /* header */
 #header-bar {
     font-size: 2rem;
@@ -105,7 +110,7 @@ h1, h2 {
     background-color: #efefef;
 }
 
-.btn:hover {
+.btn:hover, .btn:hover a {
     background-color: #13443e;
     color: #efefef;
 }
@@ -131,7 +136,7 @@ h1, h2 {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-30%, -50%) scale(0);
+    transform: translate(-50%, -50%) scale(0);
     background-color: #efefef;
     color: #13443e;
     border-radius: 5px;
@@ -140,6 +145,7 @@ h1, h2 {
     z-index: 10;
     width: 700px;
     max-width: 80%;
+    height: 500px;
 }
 
 #pop-up.active {
@@ -151,6 +157,39 @@ h1, h2 {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+}
+
+#instructions-div {
+    margin: 5px;
+    border: #13443e solid 1px;
+    text-align: center;
+}
+
+#instructions-div > a {
+    font-size: 200px;
+    height: auto;
+    color: rgba(19, 68, 62, 0.7);
+    background-color: rgba(19, 68, 62, 0.5);
+}
+
+#instructions-div > a:hover {
+    color: #13443e;
+    background-color: rgba(19, 68, 62, 0.5);
+}
+
+#instruction-btn-left {
+    float: left;
+    transform: translate(0, -110%);
+}
+
+#instruction-btn-right {
+    float: right;
+    transform: translate(0, -110%);
+}
+
+video {
+    width: 100%;
+    height: auto;
 }
 
 #close-btn {
@@ -218,6 +257,7 @@ h1, h2 {
 #btn-restart {
     width: 20%;
     margin-left: 40%;
+    color: #13443e;
 }
 
 #socials-div > p, #form-div p {
