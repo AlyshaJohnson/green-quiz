@@ -108,14 +108,18 @@ The development of this app was conducted on Google Chrome, therefore extensive 
 The elements of testing conducted on each browser are:
 - User Experience - what does the quiz look like; is the flow through the quiz the same; are all elements where they are expected?
 - Functionality - do the buttons work as expected; does the question counter count?
+- Performance - how responsive is the site?
 - Other - this includes spelling and grammatical errors.
 
 ### Validator Testing 
 
+Using tools such as W3C validator, Jigsaw and Lighthouse gives visibility of any code, scripts or elements that are causing any errors. The results for the site are as follows:
+
 - HTML
-  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcode-institute-org.github.io%2Flove-running-2.0%2Findex.html)
+  - No errors were returned when passing through the official [W3C validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Falyshajohnson.github.io%2Fgreen-quiz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 - CSS
-  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3Dhttps%253A%252F%252Fcode-institute-org.github.io%252Flove-running-2.0%252Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#css)
+  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Falyshajohnson.github.io%2Fgreen-quiz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- Performance results can be seen through the official [Lighthouse] (https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Falyshajohnson.github.io%2Fgreen-quiz%2F&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&category=pwa&utm_source=lh-chrome-ext) report.
 
 ### User Testing
 This app has been tested by a small group of users in which some feedback was captured in the design and some errors in functionality and spelling were corrected.
@@ -130,7 +134,7 @@ Errors / bug fixes:
 ### Unfixed Bugs
 
 - instructions - not able to move through videos
-- UI on phones
+- UI on phone for instructions
 
 ## Deployment
 
@@ -164,10 +168,3 @@ The photos used throughout the quiz are stock imagery from the following service
   - [PikWizard] (https://pikwizard.com/)
 
 The videos as part of the help feature, were recorded and edited by the developer.
-
-- Do some extra research on good and bad coding practices, there are a handful of useful articles to read, consider reviewing the following list when getting started:
-  - [Writing Your Best Code](https://learn.shayhowe.com/html-css/writing-your-best-code/)
-  - [HTML & CSS Coding Best Practices](https://medium.com/@inceptiondj.info/html-css-coding-best-practice-fadb9870a00f)
-  - [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html#General)
-
-Getting started with your Portfolio Projects can be daunting, planning your project can make it a lot easier to tackle, take small steps to reach the final outcome and enjoy the process!
