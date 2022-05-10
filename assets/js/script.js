@@ -2,7 +2,7 @@
 let questions = [{
     question: 'What type of car do you drive?',
     answers: [{
-        text: 'Full plug-in Electric',
+        text: 'Full plug-in electric',
         score: 3
       },
       {
@@ -205,6 +205,7 @@ let showScore = document.getElementById('show-score');
 let resultsDescription = document.getElementById('results-description');
 let resultsSuggestion = document.getElementById('results-suggestion');
 let resultsName = document.getElementById('results-name');
+let resultsImage = document.getElementById('result-image')
 
 let shuffledQuestions, currentQuestionIndex, score, counter, acceptingAnswers, selectedChoice, selectedScore;
 
@@ -326,14 +327,20 @@ function showResults() {
     resultsName.innerText = "Starting out on your green journey";
     resultsDescription.innerText = "It seems that maybe the environment is not your biggest priority right now. However, you have taken the quiz so its a good start! Please read the suggestions and it will get you started!";
     resultsSuggestion.innerText = "suggestions";
+    resultsImage.src = "";
+    resultsImage.alt = "";
   } else if (score > 21) {
     resultsName.innerText = "An eco-warrior";
     resultsDescription.innerText = "You're a keen-bean, green machine! You love the environment and you're doing as much as you can to help keep it safe.";
     resultsSuggestion.innerText = "suggestions";
+    resultsImage.src = "";
+    resultsImage.alt = "";
   } else {
     resultsName.innerText = "Mid-range Greeny";
     resultsDescription.innerText = "You have made a good start at doing your bit to save the planet.";
     resultsSuggestion.innerText = "suggestions";
+    resultsImage.src = "";
+    resultsImage.alt = "";
   };
 }
 

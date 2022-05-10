@@ -199,7 +199,7 @@ h1, h2 {
     border-radius: 50% 50%;
 }
 
-#results-div {
+#results-div, #form-socials-div {
     border: 1px #13443e solid;
     margin: 2px;
 }
@@ -230,7 +230,7 @@ h1, h2 {
     text-align: center;
 }
 
-#show-score, #results-description, #results-suggestion {
+#show-score, #results-name, #results-description, #results-suggestion {
     font-size: 1.2em;
     margin: 5px;
 }
