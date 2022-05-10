@@ -145,7 +145,6 @@ a {
     z-index: 10;
     width: 700px;
     max-width: 80%;
-    height: 500px;
 }
 
 #pop-up.active {
@@ -159,37 +158,54 @@ a {
     padding: 10px;
 }
 
+.pop-up-body {
+    width: 100%;
+}
+
+#purpose {
+    width: 95%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
 #instructions-div {
     margin: 5px;
     border: #13443e solid 1px;
     text-align: center;
 }
 
-#instructions-div > a {
-    font-size: 200px;
+#instructions-div > button {
+    font-size: 5em;
     height: auto;
     color: rgba(19, 68, 62, 0.7);
-    background-color: rgba(19, 68, 62, 0.5);
+    background-color: rgba(239,239,239, 0.5);
+    margin: auto 5px;
+    transform: translate(0, 1.3em);
 }
 
-#instructions-div > a:hover {
+#instructions-div > button:hover {
     color: #13443e;
-    background-color: rgba(19, 68, 62, 0.5);
+    background-color: rgba(239,239,239, 0.5);
 }
 
 #instruction-btn-left {
     float: left;
-    transform: translate(0, -110%);
 }
 
 #instruction-btn-right {
     float: right;
-    transform: translate(0, -110%);
 }
 
 video {
-    width: 100%;
+    width: 70%;
     height: auto;
+}
+
+#instruction {
+    font-size: 1.2em;
+    font-style: italic;
 }
 
 #close-btn {

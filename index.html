@@ -53,16 +53,16 @@
             <button data-close-button id="close-btn"><i class="fa-solid fa-xmark"></i></button>
         </div>
         <div class="pop-up-body">
-            <p>The purpose of this quiz is to assess how green you are by asking a series of questions and scoring you
+            <p id="purpose">The purpose of this quiz is to assess how green you are by asking a series of questions and scoring you
                 depending on your answer.</p>
             <div id="instructions-div">
-                <p id="instruction">instruction</p>
+                <button id="instruction-btn-left"><i class="fa-solid fa-angle-left"></i></button>
                 <video autoplay loop>
-                    <source id="instruction-video" src="" type="video/webm">
+                    <source id="instruction-video" src="./assets/videos/instruction1.webm" type="video/webm">
                     Your browser is not supported.
                 </video>
-                <a href="#" id="instruction-btn-left"><i class="fa-solid fa-angle-left"></i></a>
-                <a href="#" id="instruction-btn-right"><i class="fa-solid fa-angle-right"></i></a>
+                <button id="instruction-btn-right"><i class="fa-solid fa-angle-right"></i></button>
+                <p id="instruction">Read the question and select the button with the most appropriate answer.</p>
             </div>
         </div>
     </div>

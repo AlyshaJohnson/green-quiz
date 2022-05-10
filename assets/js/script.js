@@ -186,26 +186,21 @@ let questions = [{
 ]
 
 //instructions
-let instructions = [{
-  instructionText: 'Read the question and select the button with the most appropriate answer.',
-  video: "./assets/videos/instruction1.webm/",
-},
-{
-  instructionText: "The selected answer will turn green and the next button will become active to allow you to move onto the next question.",
-  video: "./assets/videos/instruction2.mp4/",
-},
-{
-  instructionText: "If you want to change your answer, please use the reset question button which will allow you to amend your answer.",
-  video: "./assets/videos/instruction3.mp4/",
-},
-{
-  instructionText: "The question counter in the top right hand corner, lets you know your progress through the quiz.",
-  video: "./assets/videos/instruction4.mp4/",
-},
-{
-  instructionText: "On the last question, the 'submit' button appears allowing you to submit your answers and get your result!",
-  video: "./assets/videos/instruction5.mp4/",
-}]
+let instructions = [
+  'Read the question and select the button with the most appropriate answer.',
+  "The selected answer will turn green and the next button will become active to allow you to move onto the next question.",
+  "If you want to change your answer, please use the reset question button which will allow you to amend your answer.",
+  "The question counter in the top right hand corner, lets you know your progress through the quiz.",
+  "On the last question, the 'submit' button appears allowing you to submit your answers and get your result!",
+]
+
+let instructionVideos = [
+  "./assets/videos/instruction1.webm",
+  "./assets/videos/instruction2.webm",
+  "./assets/videos/instruction3.mp4",
+  "./assets/videos/instruction4.mp4",
+  "./assets/videos/instruction5.mp4",
+]
 
 // get question page elements
 let nextButton = document.getElementById('btn-forward');
@@ -363,6 +358,7 @@ function showResults() {
     resultsName.innerText = "Starting out on your green journey";
     resultsDescription.innerText = "It seems that maybe the environment is not your biggest priority right now. However, you have taken the quiz so its a good start! Please read the suggestions and it will get you started!";
     resultsSuggestion.innerText = "suggestions";
+    // credit to saketi11 on unsplash
     resultsImage.src = "";
     resultsImage.alt = "";
   } else if (score > 21) {
@@ -386,7 +382,8 @@ function selectHelpButton() {
   popUp.classList.add('active');
   overlay.classList.add('active');
   currentInstructionIndex = 0;
-  showInstruction()
+  showInstruction();
+  autoRun();
 }
 
 // start instruction
@@ -398,13 +395,13 @@ function changeImage(x) {
   if (currentInstructionIndex < instructionLength) {
     prevInstruction.disabled = true;
   }
-  showInstruction()
+  showInstruction();
 }
 
 // show instruction
 function showInstruction() {
-  instructionText.innertext = instructions.instructionText;
-  instructionVideo.src = instructions.video;
+  instructionText.innertext = instructions[currentInstructionIndex];
+  instructionVideo.src = instructionVideos[currentInstructionIndex];
 }
 
 // next instruction
@@ -415,6 +412,11 @@ function nextInstruction() {
 // previous instruction
 function prevInstruction() {
   changeImage(-1);
+}
+
+// auto change instruction
+function autoRun() {
+  setInterval(changeImage(1), 10000);
 }
 
 // close help
