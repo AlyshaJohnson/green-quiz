@@ -92,7 +92,7 @@ let questions = [{
     alt: 'Sign post showing direction of travel',
   },
   {
-    question: 'When picking cleaning products, how to do you chose?',
+    question: 'When picking cleaning products, how do you chose?',
     answers: [{
         text: 'I use refillable cleaning products / eco-friendly solutions',
         score: 3
@@ -161,7 +161,7 @@ let questions = [{
     alt: 'variety of fruit and veg',
   },
   {
-    question: 'How consciencous are you with your bills?',
+    question: 'How conscientious are you with your bills?',
     answers: [{
         text: 'I have solar panels or other renewable energy solutions to help reduce my fossil fuel usage',
         score: 4
