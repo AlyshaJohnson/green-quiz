@@ -14,7 +14,7 @@
 <body>
     <header id="header-bar">
         <h1 id="logo">Greener Quiz</h1>
-        <button data-popup-target="#pop-up" id="btn-help"><i class="fa-solid fa-circle-info"></i></button>
+        <button data-popup-target="#pop-up" id="btn-help" aria-label="activates help pop up"><i class="fa-solid fa-circle-info"></i></button>
     </header>
     <div id="question-container">
         <div id="question-counter-container">
@@ -40,9 +40,9 @@
             <img id="question-image" src="" alt="">
         </div>
         <div class="button-container">
-            <button class="btn" id="btn-forward">Next <i class="fa-solid fa-angles-right"></i></button>
-            <button class="btn" id="btn-submit">Submit</button>
-            <button class="btn" id="btn-reset-question"><i class="fa-solid fa-arrow-rotate-right"></i></button>
+            <button class="btn" id="btn-forward" aria-label="Moves app to next question">Next <i class="fa-solid fa-angles-right"></i></button>
+            <button class="btn" id="btn-submit" aria-label="Submit quiz for results">Submit</button>
+            <button class="btn" id="btn-reset-question" aria-label="Resets question"><i class="fa-solid fa-arrow-rotate-right"></i></button>
         </div>
     </div>
 
@@ -50,19 +50,19 @@
     <div id="pop-up">
         <div class="pop-up-header">
             <h2>Instructions</h2>
-            <button data-close-button id="close-btn"><i class="fa-solid fa-xmark"></i></button>
+            <button data-close-button id="close-btn" aria-label="Closes help"><i class="fa-solid fa-xmark"></i></button>
         </div>
         <div class="pop-up-body">
             <p id="purpose">The purpose of this quiz is to assess how green you are by asking a series of questions and
                 scoring you
                 depending on your answer.</p>
             <div id="instructions-div">
-                <button id="instruction-btn-left"><i class="fa-solid fa-angle-left"></i></button>
+                <button id="instruction-btn-left" aria-label="Next instruction"><i class="fa-solid fa-angle-left"></i></button>
                 <video autoplay loop>
                     <source id="instruction-video" src="./assets/videos/instruction1.webm" type="video/webm">
                     Your browser is not supported.
                 </video>
-                <button id="instruction-btn-right"><i class="fa-solid fa-angle-right"></i></button>
+                <button id="instruction-btn-right" aria-label="Previous instruction"><i class="fa-solid fa-angle-right"></i></button>
                 <p id="instruction">Read the question and select the button with the most appropriate answer.</p>
             </div>
         </div>
@@ -81,7 +81,7 @@
                         target="_blank">Check out our blog</a> for more suggestions, how-tos and guidance to help you be
                     more green!</em></p>
             </div>
-            <button class="btn" id="btn-restart"><a href="./index.html">Restart Quiz</a></button>
+            <button class="btn" id="btn-restart" aria-label="Restarts quiz"><a href="./index.html">Restart Quiz</a></button>
             <h2>What would you like to do with your results?</h2>
             <div id="form-socials-div">
                 <div id="form-div">
@@ -91,7 +91,7 @@
                         <input type="text"><br class="br-hide">
                         <label for="">Email:</label>
                         <input type="email"><br class="br-hide">
-                        <input type="submit" class="btn">
+                        <input type="submit" class="btn" aria-label="Submits name and email">
                     </form>
                 </div>
                 <div id="socials-div">
@@ -99,17 +99,17 @@
                     <ul id="socials">
                         <li>
                             <a href="https://www.facebook.com/" target="_blank" rel="noopener"
-                                aria-label="Visit our Facebook page (opens in a new tab)"><i
+                                aria-label="Opens facebook (opens in a new tab)"><i
                                     class="fa-brands fa-facebook-square"></i></a>
                         </li>
                         <li>
                             <a href="https://www.instagram.com/" target="_blank" rel="noopener"
-                                aria-label="Visit our Instagram page (opens in a new tab)"><i
+                                aria-label="Opens Instagram (opens in a new tab)"><i
                                     class="fa-brands fa-instagram"></i></a>
                         </li>
                         <li>
                             <a href="https://www.twitter.com/" target="_blank" rel="noopener"
-                                aria-label="Visit our TikTok page (opens in a new tab)"><i
+                                aria-label="Opens TikTok (opens in a new tab)"><i
                                     class="fa-brands fa-twitter"></i></a>
                         </li>
                     </ul>
