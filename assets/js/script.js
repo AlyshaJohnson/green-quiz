@@ -353,26 +353,27 @@ function showResults() {
   questionContainer.classList.add('hide');
   // show score
   showScore.innerText = "You've scored " + score + " out of 32!";
-  // 
   if (score < 11) {
     resultsName.innerText = "Starting out on your green journey";
     resultsDescription.innerText = "It seems that maybe the environment is not your biggest priority right now. However, you have taken the quiz so its a good start! Please read the suggestions and it will get you started!";
     resultsSuggestion.innerText = "suggestions";
-    // credit to saketi11 on unsplash
-    resultsImage.src = "";
-    resultsImage.alt = "";
+    // credit to jb_charrat on unsplash
+    resultsImage.src = "./assets/images/jean-baptiste-charrat-F5s2rcNtSi0-unsplash.jpeg";
+    resultsImage.alt = "Young evergreen sapling";
   } else if (score > 21) {
     resultsName.innerText = "An eco-warrior";
     resultsDescription.innerText = "You're a keen-bean, green machine! You love the environment and you're doing as much as you can to help keep it safe.";
     resultsSuggestion.innerText = "suggestions";
-    resultsImage.src = "";
-    resultsImage.alt = "";
+    // credit to andrewcoelho on unsplash
+    resultsImage.src = "./assets/images/andrew-coelho-aL7SA1ASVdQ-unsplash.jpeg";
+    resultsImage.alt = "Evergreen forest with mist";
   } else {
     resultsName.innerText = "Mid-range Greeny";
-    resultsDescription.innerText = "You have made a good start at doing your bit to save the planet.";
+    resultsDescription.innerText = "You are somewhere between light and forest green. You've made a great start at doing your bit to save the planet.";
     resultsSuggestion.innerText = "suggestions";
-    resultsImage.src = "";
-    resultsImage.alt = "";
+    // credit to alexbelogub on unsplash
+    resultsImage.src = "./assets/images/alex-belogub-SIXwWblOzOw-unsplash.jpeg";
+    resultsImage.alt = "Small evergreen trees eclipsed by the rest of the forest";
   };
 }
 

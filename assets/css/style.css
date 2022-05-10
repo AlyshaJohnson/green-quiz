@@ -50,7 +50,7 @@ a {
 }
 
 /* quiz styling */
-#question-container, #results-container {
+#question-container {
     width: 90%;
     height: auto;
     background: #F4D1AF;
@@ -125,10 +125,6 @@ a {
 .active {
     background-color: #13443e;
     color: #efefef;
-}
-
-.hide {
-    display: none;
 }
 
 /* pop up styling */
@@ -237,7 +233,20 @@ video {
     pointer-events: all;
 }
 
+.hide {
+    display: none;
+}
+
 /* results styling */
+#results-container {
+    width: 90%;
+    height: auto;
+    background: #F4D1AF;
+    border-radius: 20px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
 #results-form-socials-div {
     display: grid;
     height: auto;
