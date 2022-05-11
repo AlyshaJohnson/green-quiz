@@ -28,7 +28,7 @@ From the research and interviews conducted with the target audience and stakehol
 5. Restart quiz
 
 ![User Stories 1 - 3](./assets/images/Readme-UserStories-1-3.JPEG)
-![User Stories 4 - 5](./assets/images/Readme-UserStories-4-5.JPEG.JPG)
+![User Stories 4 - 5](./assets/images/Readme-UserStories-4-5.JPEG)
 
 ### 1.3 Structure
 
@@ -132,17 +132,17 @@ The features deployed for this quiz are as follows:
   - Provides the purpose of the quiz
   - Cycles through 5 short videos introducing the user to the quiz, although there is a bug blocking this from happening.
 
-![Help and Instructions](https://github.com/AlyshaJohnson/green-quiz/blob/main/assets/images/Readme-help.jpeg)
+![Help and Instructions](./assets/images/Readme-help.jpeg)
 
 - __Results Page__ 
 
- - Tells the user the score, based off their interaction with the quiz.
- - Provides result description.
- - Links to an external blog to get insight into how to be more green.
- - Allows user to input name and email into form fields to get their results via email. 
- - Social media links.
+  - Tells the user the score, based off their interaction with the quiz.
+  - Provides result description.
+  - Links to an external blog to get insight into how to be more green.
+  - Allows user to input name and email into form fields to get their results via email. 
+  - Social media links.
 
-![Results]()
+![Results](./assets/images/Readme-results.jpeg)
 
 ### 2.2 Future Features
 
