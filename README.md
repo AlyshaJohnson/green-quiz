@@ -18,15 +18,52 @@ Research was conducted on similar quizzes to understand
 
 ### Scope
 
+From the research and interviews conducted with the target audience and stakeholders, user stories were created to determine the flow of the app. The focus was put on 5 user stories:
+1. Start quiz
+2. Navigation
+3. Submit results
+4. Share results
+5. Restart quiz
 
+![User Stories 1 - 3]()
+![User Stories 4 - 5]()
 
 ### Structure
 
+From the user stories, content, data, features and functionality can be determined. 
 
+For the content:
+- 1 HTML page: index.html
+- 1 pop-up div for instructions
+- 2 views:
+  - Question div
+  - Results div
+
+For the data:
+- Purpose and Instructions:
+  - Purpose and instructional descriptions
+  - Instructional images / videos
+- Questions:
+  - 15 questions
+  - 4 answers
+  - Complimentary imagary
+- Results:
+  - Score
+  - Imagery
+
+For the features / functionality:
+- Progress bar or question counter
+- Next and back buttons
+- Restart quiz
+- Form to retrieve email of results
+- Share to social media
 
 ### Skeleton
 
-
+Wireframes
+![Question View](./assets/images/Readme-Wireframe-question.jpeg)
+![Results View](./assets/images/Readme-Wireframe-results.jpeg)
+![Pop-up View](./assets/images/Readme-Wireframe-popup.jpeg)
 
 ### Surface
 
@@ -96,7 +133,7 @@ In addition, you may also use this section to discuss plans for additional featu
 - Integrate it into previous project website
 - Randomise answer array
 - Add progress bar for instructions
-- more questions
+- More questions
 
 ## Testing 
 
@@ -104,13 +141,15 @@ In addition, you may also use this section to discuss plans for additional featu
 
 Throughout project as developing quiz
 
-The development of this app was conducted on Google Chrome, therefore extensive testing was conducted on this broswer. This was used as a benchmark against Firefox, IE and Safari.
+The development of this app was conducted on Google Chrome, therefore extensive testing was conducted on this broswer. This was used as a benchmark against Firefox and Safari.
 
 The elements of testing conducted on each browser are:
 - User Experience - what does the quiz look like; is the flow through the quiz the same; are all elements where they are expected?
 - Functionality - do the buttons work as expected; does the question counter count?
 - Performance - how responsive is the site?
 - Other - this includes spelling and grammatical errors.
+
+The user experience is consistent on Chrome, Firefox and Safari. The instruction videos in Safari do not load - this bug has been captured.
 
 Responsive design is important, CSS code had to be amended and adjusted to make sure the app could work on a number of devices. There were a number of user experience bugs that were produced when testing. These have now been fixed in the code.
 
@@ -124,7 +163,9 @@ Using tools such as W3C validator, Jigsaw and Lighthouse gives visibility of any
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Falyshajohnson.github.io%2Fgreen-quiz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 - Performance results can be seen through the official [Lighthouse](https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Falyshajohnson.github.io%2Fgreen-quiz%2F&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&category=pwa&utm_source=lh-chrome-ext) report.
 
-As part of the performance test through Lighthouse, accessibility (aria-label) tags were implemented on all buttons to improve the score from 82 to 100.
+As part of the performance test through Lighthouse, some changes were made:
+- Accessibility (aria-label) tags were implemented on all buttons to improve the score from 82 to 100.
+- The cache policy was amended to increase the length of number of seconds the browser should cache the resource.
 
 ### User Testing
 This app has been tested by a small group of users in which some feedback was captured in the design and some errors in functionality and spelling were corrected.
@@ -140,7 +181,7 @@ Errors / bug fixes:
 ### Unfixed Bugs
 
 - instructions - not able to move through videos
-- instruction videos not playing / delay in playing
+- instruction videos not loading in safari
 
 ## Deployment
 
