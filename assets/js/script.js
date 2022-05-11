@@ -19,8 +19,8 @@ let questions = [{
       },
     ],
     // credit to bjearwicke on freeimages
-    images: './assets/images/running-on-empty-1311801.jpeg',
-    alt: 'Empty fuel gauge',
+    imageSrc: './assets/images/running-on-empty-1311801.jpeg',
+    imageAlt: 'Empty fuel gauge',
   },
   {
     question: 'What level of recycling do you currently do?',
@@ -42,8 +42,8 @@ let questions = [{
       },
     ],
     // credit to @sigmund on unsplash
-    images: './assets/images/sigmund-3FPtmyflfKQ-unsplash.jpeg',
-    alt: 'Black and blue wheelie bins in front of green foliage.',
+    imageSrc: './assets/images/sigmund-3FPtmyflfKQ-unsplash.jpeg',
+    imageAlt: 'Black and blue wheelie bins in front of green foliage.',
   },
   {
     question: 'What method do you use to take home your groceries?',
@@ -65,8 +65,8 @@ let questions = [{
       },
     ],
     // credit to Awesome Content on pikwizard
-    images: './assets/images/pikwizard-hand-of-a-woman-holding-grocery-bag.jpeg',
-    alt: 'A hand holding a grocery bag',
+    imageSrc: './assets/images/pikwizard-hand-of-a-woman-holding-grocery-bag.jpeg',
+    imageAlt: 'A hand holding a grocery bag',
   },
   {
     question: 'What is your main mode of transport?',
@@ -88,8 +88,8 @@ let questions = [{
       },
     ],
     // credit to betteratf8 on unsplash
-    images: './assets/images/weston-m-Vckq-heaypg-unsplash.jpeg',
-    alt: 'Sign post showing direction of travel',
+    imageSrc: './assets/images/weston-m-Vckq-heaypg-unsplash.jpeg',
+    imageAlt: 'Sign post showing direction of travel',
   },
   {
     question: 'When picking cleaning products, how do you chose?',
@@ -111,8 +111,8 @@ let questions = [{
       },
     ],
     // credit to JESHOOTS on unsplash
-    images: './assets/images/jeshoots-com-__ZMnefoI3k-unsplash.jpeg',
-    alt: 'Cleaning product being sprayed',
+    imageSrc: './assets/images/jeshoots-com-__ZMnefoI3k-unsplash.jpeg',
+    imageAlt: 'Cleaning product being sprayed',
   },
   {
     question: 'What do you do with items you no longer need?',
@@ -134,8 +134,8 @@ let questions = [{
       },
     ],
     // credit to sweetpagesco on unsplash
-    images: './assets/images/sarah-brown-oa7pqZmmhuA-unsplash.jpeg',
-    alt: 'Sorting clothes items for donation',
+    imageSrc: './assets/images/sarah-brown-oa7pqZmmhuA-unsplash.jpeg',
+    imageAlt: 'Sorting clothes items for donation',
   },
   {
     question: 'What is your diet typically like?',
@@ -157,8 +157,8 @@ let questions = [{
       },
     ],
     // image from pikwizard
-    images: './assets/images/pikwizard-fruit-food-diet.jpeg',
-    alt: 'variety of fruit and veg',
+    imageSrc: './assets/images/pikwizard-fruit-food-diet.jpeg',
+    imageAlt: 'variety of fruit and veg',
   },
   {
     question: 'How conscientious are you with your bills?',
@@ -180,26 +180,9 @@ let questions = [{
       },
     ],
     // credit to Awesome Content on pikwizard
-    images: './assets/images/pikwizard-miniature-house-with-energy-efficiency-rating-chart.jpeg',
-    alt: 'Miniture wooden house with energy efficiency rating chart',
+    imageSrc: './assets/images/pikwizard-miniature-house-with-energy-efficiency-rating-chart.jpeg',
+    imageAlt: 'Miniture wooden house with energy efficiency rating chart',
   }
-]
-
-//instructions
-let instructions = [
-  "Read the question and select the button with the most appropriate answer.",
-  "The selected answer will turn green and the next button will become active to allow you to move onto the next question.",
-  "If you want to change your answer, please use the reset question button which will allow you to amend your answer.",
-  "The question counter in the top right hand corner, lets you know your progress through the quiz.",
-  "On the last question, the 'submit' button appears allowing you to submit your answers and get your result!",
-]
-
-let instructionVideos = [
-  "./assets/videos/instruction1.webm",
-  "./assets/videos/instruction2.webm",
-  "./assets/videos/instruction3.mp4",
-  "./assets/videos/instruction4.mp4",
-  "./assets/videos/instruction5.mp4",
 ]
 
 // get question page elements
@@ -215,16 +198,6 @@ let image = document.getElementById('question-image');
 let answerButtons = document.getElementsByClassName('.btn-answer');
 let questionContainer = document.getElementById('question-container');
 
-// get help pop-up elements
-let closeButton = document.getElementById('close-btn');
-let popUp = document.getElementById('pop-up');
-let overlay = document.getElementById('overlay');
-let instructionText = document.getElementById('instruction');
-let instructionVideo = document.getElementById('instruction-video');
-let instructionLeft = document.getElementById('instruction-btn-left');
-let instructionRight = document.getElementById('instruction-btn-right');
-let instructionLength = instructions.length - 1;
-
 // get results page elements
 let showScore = document.getElementById('show-score');
 let resultsName = document.getElementById('results-name');
@@ -232,26 +205,21 @@ let resultsContainer = document.getElementById('results-container');
 let resultsImage = document.getElementById('result-image')
 
 // other variables
-let shuffledQuestions, currentQuestionIndex, score, counter, acceptingAnswers, selectedChoice, selectedScore, currentInstructionIndex;
+let shuffledQuestions, currentQuestionIndex, score, counter, acceptingAnswers, selectedChoice, selectedScore;
 
 // start quiz on load
 window.addEventListener('load', loadQuiz);
 
 function loadQuiz() {
-  console.log('loadQuiz');
-  initEventListeners();
+  initQuizEventListeners();
   startQuiz();
 }
 
-function initEventListeners() {
+function initQuizEventListeners() {
   // button actions
   nextButton.addEventListener('click', nextQuestion);
   resetQuestionButton.addEventListener('click', resetQuestion);
   submitButton.addEventListener('click', submitQuiz)
-  helpButton.addEventListener('click', selectHelpButton);
-  closeButton.addEventListener('click', closeHelp);
-  instructionLeft.addEventListener('click', nextInstruction);
-  instructionRight.addEventListener('click', prevInstruction);
 
   //add event listeners to answer buttons
   for (let i = 0; i < 4; i++) {
@@ -261,7 +229,6 @@ function initEventListeners() {
 
 // start quiz
 function startQuiz() {
-  console.log('startQuiz');
   shuffledQuestions = questions.sort(() => Math.random() - 0.5);
   currentQuestionIndex = 0;
   counter = 0;
@@ -272,7 +239,6 @@ function startQuiz() {
 
 // next question
 function nextQuestion() {
-  console.log('nextQuestion');
   showNextQuestion(shuffledQuestions[currentQuestionIndex]);
   currentQuestionIndex++;
   nextButton.disabled = true;
@@ -294,8 +260,8 @@ function showNextQuestion(question) {
     document.getElementById('answer-' + (i + 1)).value = answer.score;
   });
   //show image and alt from array
-  image.src = question.images;
-  image.alt = question.alt;
+  image.src = question.imageSrc;
+  image.alt = question.imageAlt;
   //if question is last then show submit button
   if (counter === noOfQuestions || currentQuestionIndex == (noOfQuestions - 1)) {
     submitButton.classList.remove('hide');
@@ -304,12 +270,15 @@ function showNextQuestion(question) {
     submitButton.classList.add('hide');
     nextButton.classList.remove('hide');
   }
-  // progress counter
-  counter++;
-  counterContainer.innerText = `${counter}/${noOfQuestions}`;
-  // score = score + question.answer.score
-  score += selectedScore;
-  console.log("score = " + score)
+  updateProgressCounters()
+}
+
+function updateProgressCounters() {
+ // progress counter
+ counter++;
+ counterContainer.innerText = `${counter}/${noOfQuestions}`;
+ // score = score + question.answer.score
+ score += selectedScore;
 }
 
 // selected button changes colour and answer used for score.
@@ -329,7 +298,6 @@ function selectAnswer(event) {
 
 // reset question
 function resetQuestion() {
-  console.log('resetQuestion');
   acceptingAnswers = true;
   selectedChoice.classList.remove('active');
   nextButton.disabled = true;
@@ -337,10 +305,8 @@ function resetQuestion() {
 }
 
 // submit quiz
-function submitQuiz() {
-  console.log('submitQuiz');
+function submitQuiz() {;
   // score counter
-  console.log(score);
   showResults();
 }
 
@@ -351,70 +317,28 @@ function showResults() {
   questionContainer.classList.add('hide');
   // show score
   showScore.innerText = "You've scored " + score + " out of 32!";
+  // get result attributes
+  const {text, imageSrc, imageAlt} = getResultsAttributesFromScore(score);
+  resultsName.innerText = text;
+  resultsImage.src = imageSrc;
+  resultsAlt.alt = imageAlt;
+}
+
+function getResultsAttributesFromScore(score) {
   if (score <= 11) {
-    resultsName.innerText = "A Sapling";
+    text = "A Sapling";
     // credit to jb_charrat on unsplash
-    resultsImage.src = "./assets/images/jean-baptiste-charrat-F5s2rcNtSi0-unsplash.jpeg";
-    resultsImage.alt = "Young evergreen sapling";
+    imageSrc = "./assets/images/jean-baptiste-charrat-F5s2rcNtSi0-unsplash.jpeg";
+    imageAlt = "Young evergreen sapling";
   } else if (score >= 25) {
-    resultsName.innerText = "An Eco-warrior";
+    text = "An Eco-warrior";
     // credit to andrewcoelho on unsplash
-    resultsImage.src = "./assets/images/andrew-coelho-aL7SA1ASVdQ-unsplash.jpeg";
-    resultsImage.alt = "Evergreen forest with mist";
+    imageSrc = "./assets/images/andrew-coelho-aL7SA1ASVdQ-unsplash.jpeg";
+    imageAlt = "Evergreen forest with mist";
   } else {
-    resultsName.innerText = "A Mid-range Greenie";
+    text = "A Mid-range Greenie";
     // credit to alexbelogub on unsplash
-    resultsImage.src = "./assets/images/alex-belogub-SIXwWblOzOw-unsplash.jpeg";
-    resultsImage.alt = "Small evergreen trees eclipsed by the rest of the forest";
+    imageSrc = "./assets/images/alex-belogub-SIXwWblOzOw-unsplash.jpeg";
+    imageAlt = "Small evergreen trees eclipsed by the rest of the forest";
   };
-}
-
-// select help button
-function selectHelpButton() {
-  console.log('selectHelpButton');
-  popUp.classList.add('active');
-  overlay.classList.add('active');
-  currentInstructionIndex = 0;
-  showInstruction();
-  autoRun();
-}
-
-// start instruction
-function changeImage(x) {
-  currentInstructionIndex += x;
-  if (currentInstructionIndex > instructionLength) {
-    currentInstructionIndex = 0;
-  }
-  if (currentInstructionIndex < instructionLength) {
-    prevInstruction.disabled = true;
-  }
-  showInstruction();
-}
-
-// show instruction
-function showInstruction() {
-  instructionText.innertext = instructions[currentInstructionIndex];
-  instructionVideo.src = instructionVideos[currentInstructionIndex];
-}
-
-// next instruction
-function nextInstruction() {
-  changeImage(1);
-}
-
-// previous instruction
-function prevInstruction() {
-  changeImage(-1);
-}
-
-// auto change instruction
-function autoRun() {
-  setInterval(changeImage(1), 10000);
-}
-
-// close help
-function closeHelp() {
-  console.log('closeButton');
-  popUp.classList.remove('active');
-  overlay.classList.remove('active');
 }
