@@ -182,6 +182,11 @@ Using tools such as W3C validator, Jigsaw and Lighthouse gives visibility of any
 **CSS**
 - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Falyshajohnson.github.io%2Fgreen-quiz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
+**JS**
+- [JSHint](https://jshint.com/) was used to check for errors in the JS code.
+- For script.js, there were no errors and 11 warnings.
+- For instructions.js, there were no errors and 22 warnings.
+
 **Performance** 
 - Results can be seen through the official [Lighthouse](https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Falyshajohnson.github.io%2Fgreen-quiz%2F&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&category=pwa&utm_source=lh-chrome-ext) report.
 

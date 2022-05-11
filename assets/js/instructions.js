@@ -18,9 +18,10 @@ let instructions = [{
 {
     text: "On the last question, the 'submit' button appears allowing you to submit your answers and get your result!",
     videoSrc: "./assets/videos/instruction5.webm",
-}]
+}];
 
 // get help pop-up elements
+let helpButton = document.getElementById('btn-help');
 let closeButton = document.getElementById('close-btn');
 let popUp = document.getElementById('pop-up');
 let overlay = document.getElementById('overlay');

@@ -42,7 +42,7 @@ let questions = [{
       },
     ],
     // credit to @sigmund on unsplash
-    imageSrc: './assets/images/sigmund-3FPtmyflfKQ-unsplash.jpeg',
+    imageSrc: './assets/images/bins-unsplash.jpeg',
     imageAlt: 'Black and blue wheelie bins in front of green foliage.',
   },
   {
@@ -88,7 +88,7 @@ let questions = [{
       },
     ],
     // credit to betteratf8 on unsplash
-    imageSrc: './assets/images/weston-m-Vckq-heaypg-unsplash.jpeg',
+    imageSrc: './assets/images/signpost-unsplash.jpeg',
     imageAlt: 'Sign post showing direction of travel',
   },
   {
@@ -111,7 +111,7 @@ let questions = [{
       },
     ],
     // credit to JESHOOTS on unsplash
-    imageSrc: './assets/images/jeshoots-com-__ZMnefoI3k-unsplash.jpeg',
+    imageSrc: './assets/images/cleaning-products-unsplash.jpeg',
     imageAlt: 'Cleaning product being sprayed',
   },
   {
@@ -134,7 +134,7 @@ let questions = [{
       },
     ],
     // credit to sweetpagesco on unsplash
-    imageSrc: './assets/images/sarah-brown-oa7pqZmmhuA-unsplash.jpeg',
+    imageSrc: './assets/images/sorting-clothing-unsplash.jpeg',
     imageAlt: 'Sorting clothes items for donation',
   },
   {
@@ -183,15 +183,13 @@ let questions = [{
     imageSrc: './assets/images/pikwizard-miniature-house-with-energy-efficiency-rating-chart.jpeg',
     imageAlt: 'Miniture wooden house with energy efficiency rating chart',
   }
-]
+];
 
 // get question page elements
 let nextButton = document.getElementById('btn-forward');
 let resetQuestionButton = document.getElementById('btn-reset-question');
 let submitButton = document.getElementById('btn-submit');
-let helpButton = document.getElementById('btn-help');
 let questionElement = document.getElementById('question');
-let answerElement = document.getElementById('answer-form');
 let counterContainer = document.getElementById('question-counter');
 let noOfQuestions = questions.length;
 let image = document.getElementById('question-image');
@@ -202,7 +200,7 @@ let questionContainer = document.getElementById('question-container');
 let showScore = document.getElementById('show-score');
 let resultsName = document.getElementById('results-name');
 let resultsContainer = document.getElementById('results-container');
-let resultsImage = document.getElementById('result-image')
+let resultsImage = document.getElementById('result-image');
 
 // other variables
 let shuffledQuestions, currentQuestionIndex, score, counter, acceptingAnswers, selectedChoice, selectedScore;
@@ -219,7 +217,7 @@ function initQuizEventListeners() {
   // button actions
   nextButton.addEventListener('click', nextQuestion);
   resetQuestionButton.addEventListener('click', resetQuestion);
-  submitButton.addEventListener('click', submitQuiz)
+  submitButton.addEventListener('click', submitQuiz);
 
   //add event listeners to answer buttons
   for (let i = 0; i < 4; i++) {
@@ -246,7 +244,7 @@ function nextQuestion() {
   acceptingAnswers = true;
   if (selectedChoice !== undefined) {
     selectedChoice.classList.remove('active');
-  };
+  }
 }
 
 // show next question
@@ -270,7 +268,7 @@ function showNextQuestion(question) {
     submitButton.classList.add('hide');
     nextButton.classList.remove('hide');
   }
-  updateProgressCounters()
+  updateProgressCounters();
 }
 
 function updateProgressCounters() {
@@ -290,7 +288,7 @@ function selectAnswer(event) {
     selectedScore = parseFloat(event.target.value);
   }
   // if answer is selected, next button abled
-  if (answerButtons = 'active') {
+  if (answerButtons == 'active') {
     nextButton.disabled = false;
     submitButton.disabled = false;
   }
@@ -305,7 +303,7 @@ function resetQuestion() {
 }
 
 // submit quiz
-function submitQuiz() {;
+function submitQuiz() {
   // score counter
   showResults();
 }
@@ -329,22 +327,22 @@ function getResultsAttributesFromScore(score) {
     return {
       text: "A Sapling",
       // credit to jb_charrat on unsplash
-      imageSrc: "./assets/images/jean-baptiste-charrat-F5s2rcNtSi0-unsplash.jpeg",
+      imageSrc: "./assets/images/evergreen-wood-unsplash.jpeg",
       imageAlt: "Young evergreen sapling",
     }; 
   } else if (score >= 24) {
     return {
       text: "An Eco-warrior",
       // credit to andrewcoelho on unsplash
-      imageSrc: "./assets/images/andrew-coelho-aL7SA1ASVdQ-unsplash.jpeg",
+      imageSrc: "./assets/images/evergreen-forest-with-mist-unsplash.jpeg",
       imageAlt: "Evergreen forest with mist",
-    }
+    };
   } else {
     return {
       text: "A Mid-range Greenie",
       // credit to alexbelogub on unsplash
-      imageSrc: "./assets/images/alex-belogub-SIXwWblOzOw-unsplash.jpeg",
+      imageSrc: "./assets/images/evergreen-wood-unsplash.jpeg",
       imageAlt: "Small evergreen trees eclipsed by the rest of the forest",
-    }
-  };
+    };
+  }
 }
