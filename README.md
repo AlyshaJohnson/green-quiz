@@ -65,12 +65,15 @@ From the user stories, content, data, features and functionality can be determin
 When the structure of the app, information and features had been determined, a wireframe for each view could be created:
 
 **Question View:**
+
 ![Question View](./assets/images/Readme-Wireframe-question.jpeg)
 
 **Results View:**
+
 ![Results View](./assets/images/Readme-Wireframe-results.jpeg)
 
 **Pop-up View:**
+
 ![Pop-up View](./assets/images/Readme-Wireframe-popup.jpeg)
 
 ### 1.5 Surface
@@ -108,6 +111,8 @@ The features deployed for this quiz are as follows:
 
   - The question counter provides the user with a counter which demonstrates how far along they are in the quiz.
 
+![Question Counter](./assets/images/Readme-question-counter.jpeg)
+
 - __Answer Buttons__
 
   - There are four answers to chose from, but only one can be selected.
@@ -124,19 +129,25 @@ The features deployed for this quiz are as follows:
 
 - __Help and Instructions__
 
-  - 
+  - Provides the purpose of the quiz
+  - Cycles through 5 short videos introducing the user to the quiz, although there is a bug blocking this from happening.
 
-![Help and Instructions](https://github.com/lucyrush/readme-template/blob/master/media/love_running_times.png)
+![Help and Instructions](https://github.com/AlyshaJohnson/green-quiz/blob/main/assets/images/Readme-help.jpeg)
 
 - __Results Page__ 
 
- - 
+ - Tells the user the score, based off their interaction with the quiz.
+ - Provides result description.
+ - Links to an external blog to get insight into how to be more green.
+ - Allows user to input name and email into form fields to get their results via email. 
+ - Social media links.
 
-![Results Page](https://github.com/lucyrush/readme-template/blob/master/media/love_running_footer.png)
+![Results]()
 
 ### 2.2 Future Features
 
 In addition to the features deployed, some features that could be deployed in a future release are:
+- On load, have the Instructions pop-up loaded.
 - A back button feature to navigate back through the quiz
 - Integrate the quiz into blog page (here)[https://alyshajohnson.github.io/Journey_to_green/]
 - Randomising the answer array to produce a different sequence of the answers in each question
@@ -198,9 +209,8 @@ Errors / bug fixes:
 
 ### 3.4 Unfixed Bugs
 
-- instructions - not able to move through videos
+- On the Instructions pop-up there is a bug preventing the user from cycling through the instructions and blocking the autorun() function. 
 - To reduce amount of buttons and simplify code, the 'submit' button can be a label change on the 'next' button when the last question is reached rather than a change of button.
-- Video playback error in 'Instructions' pop-up due to file types.
 
 ## 4. Deployment
 
