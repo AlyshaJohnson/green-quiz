@@ -175,8 +175,7 @@ a {
     height: auto;
     color: rgba(19, 68, 62, 0.7);
     background-color: rgba(239,239,239, 0.5);
-    margin: auto 5px;
-    transform: translate(0, 1.3em);
+    margin: 15% 5px;
 }
 
 #instructions-div > button:hover {
@@ -311,9 +310,8 @@ video {
 
 /* media queries */
 
-/* for small screen sizes 375px wide and down */
-@media screen and (max-width: 390px) {
-
+/* for small screen sizes 800px wide and down */
+@media screen and (max-width: 800px) {
     /* header */
     #logo {
         margin: 20px 30px;
@@ -337,10 +335,6 @@ video {
     }
 
     /* pop up */
-    #instructions-div > button {
-        transform: translate(0, 0.4em);
-    }
-
     #question-div {
         width: 100%;
     }
