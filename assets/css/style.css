@@ -135,11 +135,10 @@ a {
     background-color: #efefef;
     color: #13443e;
     border-radius: 5px;
-    padding: 10px;
     box-shadow: 0 0 10px 2px;
     z-index: 10;
-    width: 700px;
-    max-width: 80%;
+    width: 90%;
+    margin: auto 0;
 }
 
 #pop-up.active {
@@ -335,6 +334,11 @@ video {
     #question-image {
         height: 200px;
         width: 200px;
+    }
+
+    /* pop up */
+    #instructions-div > button {
+        transform: translate(0, 0.4em);
     }
 
     #question-div {

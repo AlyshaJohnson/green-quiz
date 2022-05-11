@@ -147,18 +147,21 @@ The live link can be found here - https://alyshajohnson.github.io/green-quiz/
 
 ## Credits 
 
-In this section you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
 
-You can break the credits section up into Content and Media, depending on what you have included in your project. 
 
 Shuffling an array - research:
 https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj#:~:text=Custom%20sort,)%20%3D%3E%200.5%20%2D%20Math.
 
 ### Content 
 
-- Instructions on how to implement form validation on the Sign Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
+Logos and Fonts:
 - The fonts were taken from [GoogleFonts] (https://fonts.google.com/)
 - The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
+
+Tutorials and support:
+- Quiz
+- Slideshow tutorial by Jay Watson on [YouTube] (https://www.youtube.com/watch?v=_lquy7YDS7Y)
+- The many people who 'beta tested' the quiz app.
 
 ### Media
 

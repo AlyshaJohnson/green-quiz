@@ -187,7 +187,7 @@ let questions = [{
 
 //instructions
 let instructions = [
-  'Read the question and select the button with the most appropriate answer.',
+  "Read the question and select the button with the most appropriate answer.",
   "The selected answer will turn green and the next button will become active to allow you to move onto the next question.",
   "If you want to change your answer, please use the reset question button which will allow you to amend your answer.",
   "The question counter in the top right hand corner, lets you know your progress through the quiz.",
