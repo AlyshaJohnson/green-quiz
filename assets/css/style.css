@@ -329,6 +329,10 @@ video {
         text-align: center;
     }
 
+    .btn {
+        color: #13443e;
+    }
+
     #question-image {
         height: 200px;
         width: 200px;

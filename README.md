@@ -95,6 +95,7 @@ In addition, you may also use this section to discuss plans for additional featu
 - Back button feature to navigate back through the quiz
 - Integrate it into previous project website
 - Randomise answer array
+- Add progress bar for instructions
 - more questions
 
 ## Testing 
@@ -111,6 +112,8 @@ The elements of testing conducted on each browser are:
 - Performance - how responsive is the site?
 - Other - this includes spelling and grammatical errors.
 
+Responsive design is important, CSS code had to be amended and adjusted to make sure the app could work on a number of devices. There were a number of user experience bugs that were produced when testing. These have now been fixed in the code.
+
 ### Validator Testing 
 
 Using tools such as W3C validator, Jigsaw and Lighthouse gives visibility of any code, scripts or elements that are causing any errors. The results for the site are as follows:
@@ -119,13 +122,16 @@ Using tools such as W3C validator, Jigsaw and Lighthouse gives visibility of any
   - No errors were returned when passing through the official [W3C validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Falyshajohnson.github.io%2Fgreen-quiz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 - CSS
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Falyshajohnson.github.io%2Fgreen-quiz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
-- Performance results can be seen through the official [Lighthouse] (https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Falyshajohnson.github.io%2Fgreen-quiz%2F&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&category=pwa&utm_source=lh-chrome-ext) report.
+- Performance results can be seen through the official [Lighthouse](https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Falyshajohnson.github.io%2Fgreen-quiz%2F&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&category=pwa&utm_source=lh-chrome-ext) report.
+
+As part of the performance test through Lighthouse, accessibility (aria-label) tags were implemented on all buttons to improve the score from 82 to 100.
 
 ### User Testing
 This app has been tested by a small group of users in which some feedback was captured in the design and some errors in functionality and spelling were corrected.
 
 UI improvements made:
 - Addition of icons on quiz navigation buttons.
+- Order of buttons, suggested the reset and next buttons were the wrong way round. This change is now implemented.
 
 Errors / bug fixes:
 - On question reset, the 'Next' button was still active.
@@ -134,7 +140,7 @@ Errors / bug fixes:
 ### Unfixed Bugs
 
 - instructions - not able to move through videos
-- UI on phone for instructions
+- instruction videos not playing / delay in playing
 
 ## Deployment
 
@@ -147,20 +153,18 @@ The live link can be found here - https://alyshajohnson.github.io/green-quiz/
 
 ## Credits 
 
-
-
-Shuffling an array - research:
-https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj#:~:text=Custom%20sort,)%20%3D%3E%200.5%20%2D%20Math.
-
 ### Content 
 
 Logos and Fonts:
-- The fonts were taken from [GoogleFonts] (https://fonts.google.com/)
+- The fonts were taken from [GoogleFonts](https://fonts.google.com/)
 - The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
 
 Tutorials and support:
-- Quiz
-- Slideshow tutorial by Jay Watson on [YouTube] (https://www.youtube.com/watch?v=_lquy7YDS7Y)
+- General guidance, information and limitations on elements, atrributes, and methods from [w3schools] (https://www.w3schools.com/default.asp) and [MDN Web Docs](https://developer.mozilla.org/en-US/)
+- Simple JavaScript quiz creation tutorial by Web Dev Simplified on [YouTube](https://www.youtube.com/watch?v=riDzcEQbX6k)
+- How to make a Quiz App by Brian Design on[YouTube](https://www.youtube.com/watch?v=f4fB9Xg2JEY)
+- Slideshow tutorial by Jay Watson on [YouTube](https://www.youtube.com/watch?v=_lquy7YDS7Y)
+- Automatic slideshow by Code Addiction on [YouTube](https://www.youtube.com/watch?v=mngeB-2Cjqg)
 - The many people who 'beta tested' the quiz app.
 
 ### Media
@@ -171,3 +175,10 @@ The photos used throughout the quiz are stock imagery from the following service
   - [PikWizard] (https://pikwizard.com/)
 
 The videos as part of the help feature, were recorded and edited by the developer.
+
+### Research
+
+As mentioned in the design section, competitor research was conducted. These are credited below:
+- [ReduceReuseRecycle](https://www.reducereuserecycle.co.uk/greengames/how_green_are_you_fun_quiz.php)
+- [BBC Newsround](https://www.bbc.co.uk/newsround/49793156)
+- [ISL Collective](https://en.islcollective.com/english-esl-worksheets/vocabulary/environment/how-green-are-youquiz/76448)
