@@ -49,6 +49,10 @@ a {
     background-color: inherit;
 }
 
+#btn-help:hover {
+    cursor: pointer;
+}
+
 /* quiz styling */
 #question-container {
     width: 90%;
@@ -109,9 +113,10 @@ a {
     background-color: #efefef;
 }
 
-.btn:hover, .btn:hover a {
+.btn:hover:enabled, .btn:hover a {
     background-color: #13443e;
     color: #efefef;
+    cursor: pointer;
 }
 
 .btn-answer {
@@ -181,6 +186,7 @@ a {
 #instructions-div > button:hover {
     color: #13443e;
     background-color: rgba(239,239,239, 0.5);
+    cursor: pointer;
 }
 
 #instruction-btn-left {
@@ -212,6 +218,7 @@ video {
 #close-btn:hover {
     border: 1px solid #13443e;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 #overlay {
@@ -302,10 +309,12 @@ video {
 
 #results-suggestion a {
     font-weight: 500;
+    colo: #E86E4C;
+    border-bottom: #E86E4C 1px solid;
 }
 
 #results-suggestion:hover a {
-    border-bottom: #13443e 1px solid;
+    cursor: pointer;
 }
 
 /* media queries */
@@ -327,10 +336,6 @@ video {
         display: block;
         height: auto;
         text-align: center;
-    }
-
-    .btn {
-        color: #13443e;
     }
 
     #question-image {

@@ -325,20 +325,26 @@ function showResults() {
 }
 
 function getResultsAttributesFromScore(score) {
-  if (score <= 11) {
-    text = "A Sapling";
-    // credit to jb_charrat on unsplash
-    imageSrc = "./assets/images/jean-baptiste-charrat-F5s2rcNtSi0-unsplash.jpeg";
-    imageAlt = "Young evergreen sapling";
-  } else if (score >= 25) {
-    text = "An Eco-warrior";
-    // credit to andrewcoelho on unsplash
-    imageSrc = "./assets/images/andrew-coelho-aL7SA1ASVdQ-unsplash.jpeg";
-    imageAlt = "Evergreen forest with mist";
+  if (score <= 14) {
+    return {
+      text: "A Sapling",
+      // credit to jb_charrat on unsplash
+      imageSrc: "./assets/images/jean-baptiste-charrat-F5s2rcNtSi0-unsplash.jpeg",
+      imageAlt: "Young evergreen sapling",
+    }; 
+  } else if (score >= 24) {
+    return {
+      text: "An Eco-warrior",
+      // credit to andrewcoelho on unsplash
+      imageSrc: "./assets/images/andrew-coelho-aL7SA1ASVdQ-unsplash.jpeg",
+      imageAlt: "Evergreen forest with mist",
+    }
   } else {
-    text = "A Mid-range Greenie";
-    // credit to alexbelogub on unsplash
-    imageSrc = "./assets/images/alex-belogub-SIXwWblOzOw-unsplash.jpeg";
-    imageAlt = "Small evergreen trees eclipsed by the rest of the forest";
+    return {
+      text: "A Mid-range Greenie",
+      // credit to alexbelogub on unsplash
+      imageSrc: "./assets/images/alex-belogub-SIXwWblOzOw-unsplash.jpeg",
+      imageAlt: "Small evergreen trees eclipsed by the rest of the forest",
+    }
   };
 }
