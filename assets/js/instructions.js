@@ -1,23 +1,23 @@
 //instructions
 let instructions = [{
     text: "Read the question and select the button with the most appropriate answer.",
-    videoSrc: "./assets/videos/instruction1.webm",
+    videoSrc: "./assets/videos/instruction1.mp4",
 },
 {
     text: "The selected answer will turn green and the next button will become active to allow you to move onto the next question.",
-    videoSrc: "./assets/videos/instruction2.webm",
+    videoSrc: "./assets/videos/instruction2.mp4",
 },
 {
     text: "If you want to change your answer, please use the reset question button which will allow you to amend your answer.",
-    videoSrc: "./assets/videos/instruction3.webm",
+    videoSrc: "./assets/videos/instruction3.mp4",
 },
 {
     text: "The question counter in the top right hand corner, lets you know your progress through the quiz.",
-    videoSrc: "./assets/videos/instruction4.webm",
+    videoSrc: "./assets/videos/instruction4.mp4",
 },
 {
     text: "On the last question, the 'submit' button appears allowing you to submit your answers and get your result!",
-    videoSrc: "./assets/videos/instruction5.webm",
+    videoSrc: "./assets/videos/instruction5.mp4",
 }];
 
 // get help pop-up elements
@@ -45,8 +45,8 @@ function loadQuiz() {
 function initInstructionEventListeners() {
     helpButton.addEventListener('click', selectHelpButton);
     closeButton.addEventListener('click', closeHelp);
-    instructionLeft.addEventListener('click', nextInstruction);
-    instructionRight.addEventListener('click', prevInstruction);
+    instructionLeft.addEventListener('click', prevInstruction);
+    instructionRight.addEventListener('click', nextInstruction);
 }
 
 // select help button
@@ -54,26 +54,30 @@ function selectHelpButton() {
     popUp.classList.add('active');
     overlay.classList.add('active');
     currentInstructionIndex = 0;
-    showInstruction();
-    autoRun();
+    showInstruction(instructions[currentInstructionIndex]);
+    // autoRun();
 }
 
 // show instruction
-function showInstruction() {
-    instructionText.innertext = instructions[currentInstructionIndex].text;
-    instructionVideo.src = instructions[currentInstructionIndex].videoSrc;
+function showInstruction(instruction) {
+    instructionText.innerText = instruction.text;
+    instructionVideo.src = instruction.videoSrc;
 }
 
 // start instruction
 function changeImage(x) {
+    // set new instruction index value
     currentInstructionIndex += x;
+    // if last instruction, set next button to inactive
     if (currentInstructionIndex === instructionLength) {
         currentInstructionIndex = 0;
     }
-    if (currentInstructionIndex == 0) {
-        prevInstruction.disabled = true;
+    // if first instruction, set previous button to inactive
+    else if (currentInstructionIndex === -1) {
+        currentInstructionIndex = instructionLength;
     }
-    showInstruction();
+    console.log(currentInstructionIndex)
+    showInstruction(instructions[currentInstructionIndex]);
 }
 
 // next instruction
@@ -88,7 +92,7 @@ function prevInstruction() {
 
 // auto change instruction
 function autoRun() {
-    setInterval(changeImage(1), 10000);
+    setInterval(changeImage(1), 300);
 }
 
 // close help
