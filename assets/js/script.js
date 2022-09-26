@@ -193,7 +193,7 @@ let questionElement = document.getElementById('question');
 let counterContainer = document.getElementById('question-counter');
 let noOfQuestions = questions.length;
 let image = document.getElementById('question-image');
-let answerButtons = document.getElementsByClassName('.btn-answer');
+let selectedAnswer = document.getElementsByClassName('active');
 let questionContainer = document.getElementById('question-container');
 
 // get results page elements
@@ -214,7 +214,7 @@ function loadQuiz() {
 }
 
 function initQuizEventListeners() {
-  // button actions
+  // event listener on click called on quiz buttons
   nextButton.addEventListener('click', nextQuestion);
   resetQuestionButton.addEventListener('click', resetQuestion);
   submitButton.addEventListener('click', submitQuiz);
@@ -225,8 +225,8 @@ function initQuizEventListeners() {
   }
 }
 
-// start quiz
 function startQuiz() {
+  // shuffles questions array so random each time, sets counter and score attributes to 0.
   shuffledQuestions = questions.sort(() => Math.random() - 0.5);
   currentQuestionIndex = 0;
   counter = 0;
@@ -235,8 +235,8 @@ function startQuiz() {
   nextQuestion();
 }
 
-// next question
 function nextQuestion() {
+  // shows next question from shuffled array based on index
   showNextQuestion(shuffledQuestions[currentQuestionIndex]);
   currentQuestionIndex++;
   nextButton.disabled = true;
@@ -249,7 +249,6 @@ function nextQuestion() {
 
 // show next question
 function showNextQuestion(question) {
-  console.log('showNextQuestion');
   // show question from array
   questionElement.innerText = question.question;
   // show answer from array
@@ -287,8 +286,12 @@ function selectAnswer(event) {
     selectedChoice = event.target;
     selectedScore = parseFloat(event.target.value);
   }
-  // if answer is selected, next button abled
-  if (answerButtons == 'active') {
+  activateButton();
+}
+
+function activateButton() {
+  // if answer is selected, next and submit button abled
+  if (selectedAnswer.length == 1) {
     nextButton.disabled = false;
     submitButton.disabled = false;
   }
@@ -310,7 +313,6 @@ function submitQuiz() {
 
 // show results
 function showResults() {
-  console.log("showResults");
   resultsContainer.classList.remove('hide');
   questionContainer.classList.add('hide');
   // show score
