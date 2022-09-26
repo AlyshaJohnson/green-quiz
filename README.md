@@ -213,7 +213,9 @@ Errors / bug fixes:
 - For better code readability, it was suggested to split out some code into more functions, for instance splitting out the updateProgreeCounter() function from the showNextQuestion() function. This has been corrected.
 - To reduce amount of buttons and simplify code, the 'submit' button can be a label change on the 'next' button when the last question is reached rather than a change of button.
 - As the JavaScript code for the Instructions pop-up did not interfere with the Quiz itself, it was suggested to split the code into two files: 'script.js' and 'instructions.js' to improve code readbility. This has been corrected.
-- On the Instructions pop-up there is a bug preventing the user from cycling through the instructions and blocking the autorun() function. This has now been fixed.
+- Navigation through the quiz is broken. This was due to the if loop determinant in the activateButton function not asking if an answer button was selected. This has been corrected.
+- On the Instructions pop-up there is a bug preventing the user from cycling through the instructions. This was due to an error pointing to the instructions array. This has now been fixed.
+- The mp4 files were not loading and playing. To fix this the file type was changed to a gif and the element holding the media is now an img.
 
 ### 3.4 Unfixed Bugs
 
