@@ -6,6 +6,8 @@ This quiz aims to increase their awareness on things they could be doing to redu
 
 ![Responsive Mockup](./assets/images/Readme-responsive-design.jpeg)
 
+A link to the live site can be found [here](https://alyshajohnson.github.io/green-quiz/).
+
 ## 1. Design and Development
 
 For the design of this quiz, the 5 pillars of User Experience Design (UXD) were used to cover the strategy, scope, structure, skeleton and surface to make sure the design is intuitive, simple and enjoyable. 
@@ -211,10 +213,10 @@ Errors / bug fixes:
 - For better code readability, it was suggested to split out some code into more functions, for instance splitting out the updateProgreeCounter() function from the showNextQuestion() function. This has been corrected.
 - To reduce amount of buttons and simplify code, the 'submit' button can be a label change on the 'next' button when the last question is reached rather than a change of button.
 - As the JavaScript code for the Instructions pop-up did not interfere with the Quiz itself, it was suggested to split the code into two files: 'script.js' and 'instructions.js' to improve code readbility. This has been corrected.
+- On the Instructions pop-up there is a bug preventing the user from cycling through the instructions and blocking the autorun() function. This has now been fixed.
 
 ### 3.4 Unfixed Bugs
 
-- On the Instructions pop-up there is a bug preventing the user from cycling through the instructions and blocking the autorun() function. 
 - To reduce amount of buttons and simplify code, the 'submit' button can be a label change on the 'next' button when the last question is reached rather than a change of button.
 
 ## 4. Deployment

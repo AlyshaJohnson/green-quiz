@@ -1,23 +1,28 @@
 //instructions
 let instructions = [{
     text: "Read the question and select the button with the most appropriate answer.",
-    videoSrc: "./assets/videos/instruction1.mp4",
+    videoSrc: "assets/videos/instruction1.gif",
+    alt: "Instructional video of selecting answer."
 },
 {
     text: "The selected answer will turn green and the next button will become active to allow you to move onto the next question.",
-    videoSrc: "./assets/videos/instruction2.mp4",
+    videoSrc: "assets/videos/instruction2.gif",
+    alt: "Instructional video of submitting answer."
 },
 {
     text: "If you want to change your answer, please use the reset question button which will allow you to amend your answer.",
-    videoSrc: "./assets/videos/instruction3.mp4",
+    videoSrc: "assets/videos/instruction3.gif",
+    alt: "Instructional video of resetting selection."
 },
 {
     text: "The question counter in the top right hand corner, lets you know your progress through the quiz.",
-    videoSrc: "./assets/videos/instruction4.mp4",
+    videoSrc: "assets/videos/instruction4.gif",
+    alt: "Instructional video detailing progress bar."
 },
 {
     text: "On the last question, the 'submit' button appears allowing you to submit your answers and get your result!",
-    videoSrc: "./assets/videos/instruction5.mp4",
+    videoSrc: "assets/videos/instruction5.gif",
+    alt: "Instructional video of submitting quiz answers."
 }];
 
 // get help pop-up elements
@@ -55,13 +60,13 @@ function selectHelpButton() {
     overlay.classList.add('active');
     currentInstructionIndex = 0;
     showInstruction(instructions[currentInstructionIndex]);
-    // autoRun();
 }
 
 // show instruction
 function showInstruction(instruction) {
     instructionText.innerText = instruction.text;
     instructionVideo.src = instruction.videoSrc;
+    instructionVideo.alt = instruction.alt;
 }
 
 // start instruction
@@ -69,14 +74,13 @@ function changeImage(x) {
     // set new instruction index value
     currentInstructionIndex += x;
     // if last instruction, set next button to inactive
-    if (currentInstructionIndex === instructionLength) {
+    if (currentInstructionIndex === instructions.length) {
         currentInstructionIndex = 0;
     }
     // if first instruction, set previous button to inactive
     else if (currentInstructionIndex === -1) {
         currentInstructionIndex = instructionLength;
     }
-    console.log(currentInstructionIndex)
     showInstruction(instructions[currentInstructionIndex]);
 }
 
@@ -88,11 +92,6 @@ function nextInstruction() {
 // previous instruction
 function prevInstruction() {
     changeImage(-1);
-}
-
-// auto change instruction
-function autoRun() {
-    setInterval(changeImage(1), 300);
 }
 
 // close help
